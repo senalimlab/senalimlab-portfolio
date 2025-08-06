@@ -5,3 +5,13 @@ export const SITE_TITLE = 'Title from Config';
 export const SITE_DESCRIPTION = 'Desc from config';
 export const GENERATE_SLUG_FROM_TITLE = true
 export const TRANSITION_API = true
+
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
+    },
+  },
+}
