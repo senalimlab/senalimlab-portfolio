@@ -8,7 +8,8 @@ module.exports = {
 			      },
 			colors: {
 			        miloYellow: '#FFD600', // nice yellow for hero circle
-			      },
+				miloPurple: '#7200FF',     
+			},
 		},
 	},
 	plugins: [require("@tailwindcss/typography"),require("daisyui")],
