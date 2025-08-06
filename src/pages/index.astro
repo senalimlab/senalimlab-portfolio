@@ -5,6 +5,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout title="Sena Lim | Clarity Alchemist">
   <main class="max-w-4xl mx-auto px-4 py-16 space-y-16">
 
+
+<section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-8 bg-white relative overflow-hidden">
+  <!-- Profile image with yellow circle -->
+  <div class="relative w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0 md:mr-12">
+    <!-- Yellow circle -->
+    <div class="absolute inset-0 bg-miloYellow rounded-full"></div>
+    <!-- Your profile image -->
+    <img
+      src="/profile.jpg"
+      alt="Sena"
+      class="absolute inset-0 w-full h-full object-cover rounded-full"
+    />
+  </div>
+
+  <!-- Text Content -->
+  <div class="text-left space-y-4 max-w-xl">
+    <h1 class="font-serif font-bold text-5xl sm:text-6xl md:text-7xl leading-tight tracking-[0.03em]">
+      Hi,<br/>
+      I’m Sena<br/>
+      The Clarity<br/>Alchemist.
+    </h1>
+    <p class="text-lg sm:text-xl md:text-2xl text-gray-700 mt-6">
+      I turn scattered signals into clear insights and experiment my way to meaningful change.
+    </p>
+  </div>
+</section>
+
+
 <section class="min-h-screen flex items-center justify-center bg-white">
   <div class="text-left ">
     <h1 class="font-serif text-6xl sm:text-7xl md:text-9xl tracking-wide"><!--leading-tight tracking-wide-->
