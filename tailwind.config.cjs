@@ -6,6 +6,9 @@ module.exports = {
 			fontFamily: {
 			        serif: ['Playfair Display', 'serif'],
 			      },
+			colors: {
+			        miloYellow: '#FFD600', // nice yellow for hero circle
+			      },
 		},
 	},
 	plugins: [require("@tailwindcss/typography"),require("daisyui")],
