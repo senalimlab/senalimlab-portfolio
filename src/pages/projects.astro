@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Sena Lim | Projects">
+  <main class="max-w-4xl mx-auto px-4 py-16 space-y-12">
+
+    <section class="space-y-8">
+      <h1 class="text-3xl font-bold text-center">All Projects</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- BlueSG Project -->
+        <div class="border rounded-lg p-6 hover:shadow-lg transition space-y-2">
+          <img src="/images/bluesg.webp" alt="BlueSG EV System Rebuild" class="rounded mb-4" />
+          <h2 class="font-semibold text-lg">BlueSG EV System Rebuild</h2>
+          <p class="text-gray-700 text-sm">
+            Led a live migration for 900 EVs & 1,500 endpoints without downtime.
+            Delivered under strict compliance and operational constraints.
+          </p>
+        </div>
+
+        <!-- Yara Project -->
+        <div class="border rounded-lg p-6 hover:shadow-lg transition space-y-2">
+          <img src="/images/yara.webp" alt="Yara Dealer Loyalty Platform" class="rounded mb-4" />
+          <h2 class="font-semibold text-lg">Yara Dealer Loyalty Platform</h2>
+          <p class="text-gray-700 text-sm">
+            Scaled adoption to 3M+ low-digital-confidence users through trust-first onboarding
+            and iterative digital migration.
+          </p>
+        </div>
+
+        <!-- Neuron Project -->
+        <div class="border rounded-lg p-6 hover:shadow-lg transition space-y-2">
+          <img src="/images/neuron.webp" alt="Neuron Mobility AI Nudges" class="rounded mb-4" />
+          <h2 class="font-semibold text-lg">Neuron Mobility AI Nudges</h2>
+          <p class="text-gray-700 text-sm">
+            Improved activation by 14% and reduced violations by 12% via AI-driven nudges
+            and user-friendly mobile experiences.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>
