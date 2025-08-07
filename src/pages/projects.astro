@@ -1,100 +1,81 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+
 ---
 
-<BaseLayout title="Sena Lim | Case Studies">
-  <main class="max-w-7xl mx-auto px-4 py-16 flex flex-col -space-y-20 items-center"> 
+<BaseLayout title = "Case tudies" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Inclusion & Everyday Systems</div>
+  </div>
 
-    <section class=" w-full flex flex-col items-center text-center"> <!--space-y-8-->
-      <h1 class="text-3xl font-bold">Inclusion & Everyday Systems</h1>
-      <p class="text-gray-700 text-base max-w-2xl">
-        I’m drawn to problems where the stakes are personal, and people are often overlooked.
-        These aren’t projects I’ve delivered for any employer—they’re sketches of how I’d approach the challenge if I were leading product.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Youth Mental Health -->
-        <div class="border rounded-lg p-6 hover:shadow-lg transition space-y-2">
-          <h2 class="font-semibold text-lg">🌱 Youth Mental Health</h2>
-          <p class="text-gray-700 text-base">
-            For youth mental health, I imagined an emotional check-in tool for schools, 
-            helping spot distress early and making support feel normal and approachable.
-          </p>
-          <a class="btn" href="https://gamma.app/docs/Youth-Mental-Health-in-Singapore-td94aa5y2k4zpkh" target="_blank">View</a>
-        </div>
-
-        <!-- Ageing with Dignity -->
-        <div class="border rounded-lg p-6 hover:shadow-lg transition space-y-2">
-          <h2 class="font-semibold text-lg">🧓 Ageing with Dignity</h2>
-          <p class="text-gray-700 text-base">
-            For seniors and caregivers, I mapped out simple concepts that could make support
+  <HorizontalCard
+    title="🌱 Youth Mental Health"
+    img="/post_img.webp"
+    desc="For youth mental health, I imagined an emotional check-in tool for schools, 
+            helping spot distress early and making support feel normal and approachable."
+    url="https://gamma.app/docs/Youth-Mental-Health-in-Singapore-td94aa5y2k4zpkh"
+    badge="NEW"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="🧓 Ageing with Dignity"
+    img="/post_img.webp"
+    desc="For seniors and caregivers, I mapped out simple concepts that could make support
             routines less stressful—maybe a tap-in mood kiosk, or delivery rhythms that help staff 
-            and users avoid burnout.
-          </p>
-          <a class="btn" href="https://gamma.app/docs/Scaling-Trusted-Sustainable-Care-kw1gywhu6wz95c1" target="_blank">View</a>
-        </div>
+            and users avoid burnout."
+    url="https://gamma.app/docs/Scaling-Trusted-Sustainable-Care-kw1gywhu6wz95c1"
+  />
+ <div class="divider my-0"></div>
+  <HorizontalCard
+    title="🔗 Inclusive Digitalisation"
+    img="/post_img.webp"
+    desc="For digital inclusion, I explored what it might take to move beyond pilot programs, 
+            building lasting digital partnerships where everyone’s voice is included from day one."
+    url="https://gamma.app/docs/OneDigital-Ecosystem-qr0yxvbc3tfxxs"
+  />
+ <div class="divider my-0"></div>
+  <HorizontalCard
+    title="♿ Systems for People of Determination"
+    img="/post_img.webp"
+    desc="I sketched out how support for people with disabilities could be rolled out step by step, 
+            with a focus on daily realities instead of frameworks."
+    url="https://gamma.app/docs/Sena-Lim-SGEnable-Idea-Deck-u0xwp2sz5357grt"
+  />
+ <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Building Everyday Trust (CDC Vouchers)"
+    img="/post_img.webp"
+    desc="Even for something like national vouchers, I looked at how thoughtful design can help hesitant users 
+            trust and adopt new tools, not just feel left behind (This thinking builds on my reflection here)"
+    url="https://gamma.app/docs/Building-Everyday-Trust-in-CDC-Vouchers-pi98twd94vr72vs"
+  />
 
-        <!-- Inclusive Digitalisation -->
-        <div class="border rounded-lg p-6 hover:shadow-lg transition space-y-2">
-          <h2 class="font-semibold text-lg">🔗 Inclusive Digitalisation</h2>
-          <p class="text-gray-700 text-base">
-            For digital inclusion, I explored what it might take to move beyond pilot programs, 
-            building lasting digital partnerships where everyone’s voice is included from day one.
-          </p>
-          <a class="btn" href="https://gamma.app/docs/OneDigital-Ecosystem-qr0yxvbc3tfxxsl" target="_blank">View</a>
-        </div>
 
-        <!-- Systems for People of Determination -->
-        <div class="border rounded-lg p-6 hover:shadow-lg transition space-y-2">
-          <h2 class="font-semibold text-lg">♿ Systems for People of Determination</h2>
-          <p class="text-gray-700 text-base">
-            I sketched out how support for people with disabilities could be rolled out step by step, 
-            with a focus on daily realities instead of frameworks.
-          </p>
-          <a class="btn" href="https://gamma.app/docs/Sena-Lim-SGEnable-Idea-Deck-u0xwp2sz5357grt" target="_blank">View</a>
-        </div>
 
-        <!-- Building Everyday Trust (CDC Vouchers) -->
-        <div class="border rounded-lg p-6 hover:shadow-lg transition space-y-2">
-          <h2 class="font-semibold text-lg">Building Everyday Trust (CDC Vouchers)</h2>
-          <p class="text-gray-700 text-base">
-            Even for something like national vouchers, I looked at how thoughtful design can help hesitant users 
-            trust and adopt new tools, not just feel left behind (This thinking builds on my reflection here)
-          </p>
-          <a class="btn" href="https://gamma.app/docs/Building-Everyday-Trust-in-CDC-Vouchers-pi98twd94vr72vs" target="_blank">View</a>
-        </div>
-      </div>
-    </section>
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Mission-Critical Strategy</div>
+  </div>
 
-    <section class="space-y-8 w-full flex flex-col items-center text-center">
-      <h1 class="text-3xl font-bold">Mission-Critical Strategy</h1>
-      <p class="text-gray-700 text-base max-w-2xl">
-        Sometimes I test my product thinking in high-pressure or crisis environments, even if only on paper.
-        Here are a couple of thought experiments that show how I’d approach these kinds of situations.
-      </p>
+  <HorizontalCard
+    title="⚓ Crisis Triage System"
+    img="/post_img.webp"
+    desc="I mapped out a unified triage and tasking system for military teams, aiming to 
+            balance human judgment with tech support and fit real decision-making workflows."
+    url="https://gamma.app/docs/Crisis-Triage-Ecosystem-01lr9crq9g9vk2v"
+    badge="FOSS"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="🚨 Public Safety Triage Ecosystem"
+    img="/post_img.webp"
+    desc="I also explored what an AI-powered triage process for public safety might look like, 
+            focusing on explainability and compliance so that technology earns trust, not confusion."
+  />
+</BaseLayout>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Crisis Triage System -->
-        <div class="border rounded-lg p-6 hover:shadow-lg transition space-y-2">
-          <h2 class="font-semibold text-lg">⚓ Crisis Triage System</h2>
-          <p class="text-gray-700 text-base">
-            I mapped out a unified triage and tasking system for military teams, aiming to 
-            balance human judgment with tech support and fit real decision-making workflows.
-          </p>
-          <a class="btn" href="https://gamma.app/docs/Crisis-Triage-Ecosystem-01lr9crq9g9vk2v" target="_blank">View</a>
-        </div>
 
-        <!-- Public Safety Triage Ecosystem -->
-        <div class="border rounded-lg p-6 hover:shadow-lg transition space-y-2">
-          <h2 class="font-semibold text-lg">🚨 Public Safety Triage Ecosystem</h2>
-          <p class="text-gray-700 text-base">
-            I also explored what an AI-powered triage process for public safety might look like, 
-            focusing on explainability and compliance so that technology earns trust, not confusion.
-          </p>
-          <a class="btn" href="https://gamma.app/docs/Crisis-Triage-Ecosystem-zwdjkqc3valxi1d" target="_blank">View</a>
-        </div>
-      </div>
-    </section>
+
 
   </main>
 </BaseLayout>
