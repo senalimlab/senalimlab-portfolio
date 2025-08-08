@@ -13,7 +13,7 @@ module.exports = {
 			      },
 			colors: {
 			        miloYellow: '#fcdb05', // '#e80558', // nice yellow for hero circle\
-					textYellow: '#ebcc05',
+					textYellow: '#d6c102', //'#ebcc05',
 				miloPurple: '#7200FF',     
 			},
 		},
