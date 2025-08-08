@@ -1,4 +1,5 @@
 ---
+import HorizontalCard from "./HorizontalCard.astro";
 import type { CaseStudy } from "../content/caseStudies";
 
 interface Props {
@@ -10,28 +11,23 @@ const { title = "Case Studies", items } = Astro.props;
 <section class="px-4 md:px-8 py-10">
   <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">{title}</h2>
 
-  <!-- viewport -->
   <div class="relative">
-    <!-- track -->
     <div
       id="cs-track"
       class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none]"
       aria-label={title}
     >
       <style is:inline>
-        /* hide scrollbar (webkit) */
         #cs-track::-webkit-scrollbar{display:none;}
       </style>
 
       {items.map((it) => (
         <div class="snap-center shrink-0 w-[90%] sm:w-[70%] md:w-[60%] lg:w-[700px]">
-          <!-- Use your existing HorizontalCard to keep styling consistent -->
-          <Fragment set:html={`<horizontal-card title="${it.title}" img="${it.img}" desc="${it.desc}" url="${it.url}" ${it.badge ? `badge="${it.badge}"` : ""}></horizontal-card>`} />
+          <HorizontalCard {...it} />
         </div>
       ))}
     </div>
 
-    <!-- controls -->
     <div class="mt-4 flex items-center justify-center gap-3">
       <button id="cs-prev" class="rounded-full border px-3 py-1 text-sm hover:bg-gray-50" aria-label="Previous">‹</button>
       <div id="cs-dots" class="flex gap-2"></div>
@@ -69,9 +65,10 @@ const { title = "Case Studies", items } = Astro.props;
     next.disabled = active === slides.length-1;
   }
 
-  // dots
   slides.forEach((_, i) => {
     const b = document.createElement('button');
+    // tweak colors to your brand if you like:
+    // e.g., 'bg-gray-300 aria-[current=true]:bg-miloPurple'
     b.className = 'h-2 w-2 rounded-full bg-gray-300 aria-[current=true]:bg-black';
     b.setAttribute('aria-label', `Go to slide ${i+1}`);
     b.addEventListener('click', () => go(i));
@@ -81,15 +78,9 @@ const { title = "Case Studies", items } = Astro.props;
   prev.addEventListener('click', () => go(idxFromScroll()-1));
   next.addEventListener('click', () => go(idxFromScroll()+1));
 
-  // keep dots in sync while dragging/scrolling
   let raf; track.addEventListener('scroll', () => {
     cancelAnimationFrame(raf); raf = requestAnimationFrame(() => sync());
   }, { passive:true });
-
-  // optional autoplay (comment out if you don’t want it)
-  // let timer = setInterval(() => go((idxFromScroll()+1)%slides.length), 5000);
-  // track.addEventListener('mouseenter', () => clearInterval(timer));
-  // track.addEventListener('mouseleave', () => timer = setInterval(() => go((idxFromScroll()+1)%slides.length), 5000));
 
   sync(0);
 </script>
