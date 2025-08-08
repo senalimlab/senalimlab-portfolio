@@ -1,0 +1,47 @@
+// src/data/caseStudies.ts
+export type CaseStudy = {
+  title: string
+  img: string
+  desc: string
+  url: string
+  badge?: string
+}
+
+export const caseStudies: CaseStudy[] = [
+  {
+    title: "🌱 Youth Mental Health",
+    img: "/post_img.webp",
+    desc:
+      "For youth mental health, I imagined an emotional check-in tool for schools, helping spot distress early and making support feel normal and approachable.",
+    url: "https://gamma.app/docs/Youth-Mental-Health-in-Singapore-td94aa5y2k4zpkh",
+    badge: "NEW",
+  },
+  {
+    title: "🧓 Ageing with Dignity",
+    img: "/post_img.webp",
+    desc:
+      "For seniors and caregivers, I mapped simple concepts to make support routines less stressful — a tap-in mood kiosk, or delivery rhythms that avoid burnout.",
+    url: "https://gamma.app/docs/Scaling-Trusted-Sustainable-Care-kw1gywhu6wz95c1",
+  },
+  {
+    title: "🔗 Inclusive Digitalisation",
+    img: "/post_img.webp",
+    desc:
+      "Moving beyond pilots: lasting digital partnerships where everyone's voice is included from day one.",
+    url: "https://gamma.app/docs/OneDigital-Ecosystem-qr0yxvbc3tfxxs",
+  },
+  {
+    title: "♿ Systems for People of Determination",
+    img: "/post_img.webp",
+    desc:
+      "Rolling out support step by step for people with disabilities, focused on daily realities instead of frameworks.",
+    url: "https://gamma.app/docs/Sena-Lim-SGEnable-Idea-Deck-u0xwp2sz5357grt",
+  },
+  {
+    title: "🏦 Building Everyday Trust (CDC Vouchers)",
+    img: "/post_img.webp",
+    desc:
+      "How thoughtful design can help hesitant users trust and adopt national vouchers — not feel left behind.",
+    url: "https://gamma.app/docs/Building-Everyday-Trust-in-CDC-Vouchers-pi98twd94vr72vs",
+  },
+]
