@@ -12,7 +12,7 @@ module.exports = {
 			        serif: ['Playfair Display', 'serif'],
 			      },
 			colors: {
-			        miloYellow: '#e80558', // nice yellow for hero circle
+			        miloYellow: '#fcdb05', // '#e80558', // nice yellow for hero circle
 				miloPurple: '#7200FF',     
 			},
 		},
