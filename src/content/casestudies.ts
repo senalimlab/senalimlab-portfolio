@@ -66,7 +66,7 @@ export const caseStudiesMission: CaseStudy[] =  [
   {
     title: "🚨 Public Safety Triage Ecosystem",
     img: "/thumb_crisis2.png",
-    desc: "I also explored what an AI-powered triage process for public safety might look like, focusing on explainability and compliance so that technology earns trust, not confusion."
+    desc: "I also explored what an AI-powered triage process for public safety might look like, focusing on explainability and compliance so that technology earns trust, not confusion.",
     url: "https://gamma.app/docs/Crisis-Triage-Ecosystem-zwdjkqc3valxi1d",
   }
   ];
