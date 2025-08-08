@@ -21,9 +21,9 @@
 ---
 const currentPath = Astro.url.pathname;
 
-let siteTitle = "Sena Lim ⚡️";
+let siteTitle = "";
 
-if (currentPath.includes("/casestudies")) {
+if (currentPath.includes("/case-studies")) {
   siteTitle = "Case Studies";
 } else if (currentPath.includes("/about")) {
   siteTitle = "About Me";
