@@ -17,6 +17,9 @@ module.exports = {
 					textYellow: '#ebcc05',
 				miloPurple: '#7200FF',     
 			},
+			fontSize: {
+			      '4-5xl': '2.625rem', // 42px
+			    },
 		},
 	},
 	plugins: [require("@tailwindcss/typography"),require("daisyui")],
