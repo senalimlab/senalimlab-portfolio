@@ -1,5 +1,5 @@
  // src/data/caseStudies.ts
-export type CaseStudy :  {
+export type CaseStudy =  {
   title: string
   img: string
   desc: string
@@ -7,7 +7,7 @@ export type CaseStudy :  {
   badge?: string
 }
 
-export const caseStudiesInclusion: CaseStudy[] :  [
+export const caseStudiesInclusion: CaseStudy[] =  [
   {
     title: "🌱 Youth Mental Health"
     img: "/thumb_youth.png"
@@ -55,7 +55,7 @@ export const caseStudiesInclusion: CaseStudy[] :  [
 
 
 
-export const caseStudiesMission: CaseStudy[] :  [
+export const caseStudiesMission: CaseStudy[] =  [
   {
     title: "⚓ Crisis Triage System"
     img: "/thumb_crisis1.png"
