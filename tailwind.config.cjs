@@ -18,7 +18,7 @@ module.exports = {
 				miloPurple: '#7200FF',     
 			},
 			fontSize: {
-			      '4-5xl': '2.625rem', // 42px
+			      '4-5xl': '2.7rem', // 42px
 			    },
 		},
 	},
