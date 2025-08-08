@@ -1,10 +1,10 @@
  // src/data/caseStudies.ts
 export type CaseStudy =  {
-  title: string
-  img: string
-  desc: string
-  url: string
-  badge?: string
+  title: string;
+  img: string;
+  desc: string;
+  url: string;
+  badge: string;
 }
 
 export const caseStudiesInclusion: CaseStudy[] =  [
