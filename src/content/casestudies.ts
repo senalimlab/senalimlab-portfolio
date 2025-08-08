@@ -5,7 +5,7 @@ export type CaseStudy =  {
   desc: string;
   url: string;
   badge?: string;
-}
+};
 
 export const caseStudiesInclusion: CaseStudy[] =  [
   {
@@ -51,7 +51,7 @@ export const caseStudiesInclusion: CaseStudy[] =  [
     desc: "For Singapore’s social sector, I mapped out how to scale a national case management system so every agency, volunteer, and frontline worker adopts it with confidence — and no family waits because the system failed them."
     url: "https://gamma.app/docs/MSF-Case-Management-Scaling-Strategy-wughh5ajdvvsj0p?mode: doc"
   }
-  ]
+  ];
 
 
 
@@ -69,5 +69,5 @@ export const caseStudiesMission: CaseStudy[] =  [
     desc: "I also explored what an AI-powered triage process for public safety might look like, focusing on explainability and compliance so that technology earns trust, not confusion."
     url: "https://gamma.app/docs/Crisis-Triage-Ecosystem-zwdjkqc3valxi1d"
   }
-  ]
+  ];
 
