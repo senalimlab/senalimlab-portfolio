@@ -5,82 +5,101 @@ import type { CaseStudy } from "../content/caseStudies";
 interface Props {
   title?: string;
   items: CaseStudy[];
+  id?: string; // optional if you ever want multiple carousels on a page
 }
-const { title = "Case Studies", items } = Astro.props;
+
+const { title = "Case Studies", items, id = "cs" } = Astro.props;
+// IDs derive from `id` so multiple carousels won't clash
+const trackId = `${id}-track`;
+const prevId = `${id}-prev`;
+const nextId = `${id}-next`;
+const dotsId = `${id}-dots`;
 ---
 <section class="px-4 md:px-8 py-10">
   <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">{title}</h2>
 
   <div class="relative">
+    <!-- track / viewport -->
     <div
-      id="cs-track"
-      class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none]"
+      id={trackId}
+      class="flex gap-0 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-12 [-ms-overflow-style:none] [scrollbar-width:none]"
       aria-label={title}
     >
       <style is:inline>
-        #cs-track::-webkit-scrollbar{display:none;}
+        /* hide scrollbar on webkit */
+        #{trackId}::-webkit-scrollbar { display: none; }
       </style>
 
       {items.map((it) => (
-        <div class="snap-center shrink-0 w-[90%] sm:w-[70%] md:w-[60%] lg:w-[700px]">
+        /* full-width slide so nothing peeks */
+        <div class="snap-center shrink-0 basis-full w-full mx-auto px-3 md:max-w-[760px] lg:max-w-[820px]">
           <HorizontalCard {...it} />
         </div>
       ))}
     </div>
 
-    <div class="mt-4 flex items-center justify-center gap-3">
-      <button id="cs-prev" class="rounded-full border px-3 py-1 text-sm hover:bg-gray-50" aria-label="Previous">‹</button>
-      <div id="cs-dots" class="flex gap-2"></div>
-      <button id="cs-next" class="rounded-full border px-3 py-1 text-sm hover:bg-gray-50" aria-label="Next">›</button>
+    <!-- controls + dots tucked close to the carousel -->
+    <div class="pointer-events-none absolute inset-x-0 bottom-2 flex items-center justify-center gap-3">
+      <button id={prevId} class="pointer-events-auto rounded-full border px-3 py-1 text-sm hover:bg-gray-50" aria-label="Previous">‹</button>
+      <div id={dotsId} class="flex gap-2"></div>
+      <button id={nextId} class="pointer-events-auto rounded-full border px-3 py-1 text-sm hover:bg-gray-50" aria-label="Next">›</button>
     </div>
   </div>
 </section>
 
 <script is:inline>
-  const track = document.getElementById('cs-track');
-  const slides = Array.from(track.children);
-  const prev = document.getElementById('cs-prev');
-  const next = document.getElementById('cs-next');
-  const dotsWrap = document.getElementById('cs-dots');
+  // Resolve elements via the IDs created from the `id` prop
+  const track = document.getElementById({trackId});
+  const prev = document.getElementById({prevId});
+  const next = document.getElementById({nextId});
+  const dotsWrap = document.getElementById({dotsId});
 
-  function idxFromScroll(){
+  const slides = Array.from(track.children);
+
+  function centerIndex(){
     const left = track.getBoundingClientRect().left;
-    let i=0, m=Infinity;
+    let i = 0, best = Infinity;
     slides.forEach((s, k) => {
       const d = Math.abs(s.getBoundingClientRect().left - left);
-      if (d < m) { m = d; i = k; }
+      if (d < best) { best = d; i = k; }
     });
     return i;
   }
+
   function go(i){
-    const t = Math.max(0, Math.min(slides.length-1, i));
-    slides[t].scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+    const t = Math.max(0, Math.min(slides.length - 1, i));
+    slides[t].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     sync(t);
   }
-  function sync(active = idxFromScroll()){
-    dotsWrap.querySelectorAll('button').forEach((b, i) =>
-      b.setAttribute('aria-current', i === active)
-    );
-    prev.disabled = active === 0;
-    next.disabled = active === slides.length-1;
+
+  function sync(active = centerIndex()){
+    dotsWrap.querySelectorAll('button').forEach((b, i) => {
+      b.setAttribute('aria-current', i === active ? 'true' : 'false');
+    });
+    if (prev) prev.disabled = active === 0;
+    if (next) next.disabled = active === slides.length - 1;
   }
 
+  // Build dots
   slides.forEach((_, i) => {
     const b = document.createElement('button');
-    // tweak colors to your brand if you like:
-    // e.g., 'bg-gray-300 aria-[current=true]:bg-miloPurple'
+    // tweak brand color if you want: replace bg-black with bg-miloPurple
     b.className = 'h-2 w-2 rounded-full bg-gray-300 aria-[current=true]:bg-black';
     b.setAttribute('aria-label', `Go to slide ${i+1}`);
     b.addEventListener('click', () => go(i));
     dotsWrap.appendChild(b);
   });
 
-  prev.addEventListener('click', () => go(idxFromScroll()-1));
-  next.addEventListener('click', () => go(idxFromScroll()+1));
+  prev?.addEventListener('click', () => go(centerIndex() - 1));
+  next?.addEventListener('click', () => go(centerIndex() + 1));
 
-  let raf; track.addEventListener('scroll', () => {
-    cancelAnimationFrame(raf); raf = requestAnimationFrame(() => sync());
-  }, { passive:true });
+  // keep dots in sync during manual scroll/drag
+  let raf;
+  track.addEventListener('scroll', () => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => sync());
+  }, { passive: true });
 
+  // initial sync
   sync(0);
 </script>
