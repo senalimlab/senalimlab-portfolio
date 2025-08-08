@@ -6,7 +6,7 @@ import { caseStudiesInclusion, caseStudiesMission } from "../content/casestudies
 import { Image } from "astro:assets";
 
 // all in one rail (or pass just one category)
-const all = [...caseStudiesInclusion, ...caseStudiesMission];
+const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 ---
 
 <BaseLayout title="Sena Lim | Clarity Alchemist">
@@ -43,7 +43,24 @@ const all = [...caseStudiesInclusion, ...caseStudiesMission];
   </div>
 </section>
 
-<CaseStudiesCarousel title="Featured Case Studies" items={all} />
+<section class="px-4 md:px-8 py-12">
+  <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Featured Case Studies</h2>
+
+  <div class="space-y-6">
+    {featured.map((item, i) => (
+      <div>
+        <HorizontalCard {...item} />
+        {i < featured.length - 1 && <div class="divider my-0"></div>}
+      </div>
+    ))}
+  </div>
+
+  <div class="mt-8 flex justify-center">
+  <a class="btn" href="/projects" target="_blank">
+          View All
+        </a>
+    </div>
+</section>
 
   </main>
 </BaseLayout>
