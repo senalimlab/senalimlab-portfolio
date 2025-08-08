@@ -4,6 +4,8 @@ import CaseStudiesCarousel from "../components/CaseStudiesCarousel.astro";
 import { caseStudiesInclusion, caseStudiesMission } from "../content/casestudies";
 import { Image } from "astro:assets";
 
+// all in one rail (or pass just one category)
+const all = [...caseStudiesInclusion, ...caseStudiesMission];
 ---
 
 <BaseLayout title="Sena Lim | Clarity Alchemist">
