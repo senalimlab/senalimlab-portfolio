@@ -4,7 +4,7 @@ export type CaseStudy =  {
   img: string;
   desc: string;
   url: string;
-  badge: string;
+  badge?: string;
 }
 
 export const caseStudiesInclusion: CaseStudy[] =  [
