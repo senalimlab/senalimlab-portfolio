@@ -1,3 +1,5 @@
+New
+
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
@@ -114,10 +116,9 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
   ABOUT ME & RESUME 
 ------------------------------------------->
 
-<section class="mt-4 md:mt-8 mb-20 md:mb-30">
-  <!-- Divider -->
-<Divider class="my-6" />
-  <div class="space-y-6">
+<section class="top-margin mb-20 md:mb-30">
+<Divider class="section-spacing" />
+  <div class="section-gap">
     <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">
       A Little About Me
     </h2>
@@ -141,48 +142,49 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 ------------------------------------------->
 
 <!--<section class="max-w-4xl mx-auto px-4 py-12">-->
-<section class="mt-4 md:mt-4  mb-20 md:mb-30">
-  <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">
-    What People Say About Me
-  </h2>
-
-  <div class="space-y-6 text-3xl md:text-4xl">
-    <blockquote class="border-l-4 border-miloYellow pl-4 italic">
-      "Cuts through noise to focus on what matters."
-    </blockquote>
-    <blockquote class="border-l-4 border-miloYellow pl-4 italic">
-      "Balances strategy, execution, and long-term maintenance."
-    </blockquote>
-    <blockquote class="border-l-4 border-miloYellow pl-4 italic">
-      "Shows warm, motherly energy that motivates others."
-    </blockquote>
-    <blockquote class="border-l-4 border-miloYellow pl-4 italic">
-      "Reliable, accountable, and builds trust across teams."
-    </blockquote>
+<section class="top-margin mb-20 md:mb-30">
+<Divider class="section-spacing" />
+<div class="section-gap text-3xl md:text-4xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">
+      What People Say About Me
+    </h2>
+      <blockquote class="border-l-4 border-miloYellow pl-4 italic">
+        "Cuts through noise to focus on what matters."
+      </blockquote>
+      <blockquote class="border-l-4 border-miloYellow pl-4 italic">
+        "Balances strategy, execution, and long-term maintenance."
+      </blockquote>
+      <blockquote class="border-l-4 border-miloYellow pl-4 italic">
+        "Shows warm, motherly energy that motivates others."
+      </blockquote>
+      <blockquote class="border-l-4 border-miloYellow pl-4 italic">
+        "Reliable, accountable, and builds trust across teams."
+      </blockquote>
   </div>
 </section>
 
 
 <!--<section class="px-4 md:px-8 py-12  -mx-6 md:-mx-12 -my-10 md:-my-12">
 -->
-<section class="mt-4 md:mt-8  mb-20 md:mb-30">
-  <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">
-    Featured Case Studies
-  </h2>
-
-  <div class="space-y-6">
-    {featured.map((item, i) => (
-      <div>
-        <HorizontalCard {...item} />
-        {i < featured.length - 1 && <div class="divider my-0"></div>}
-      </div>
-    ))}
-  </div>
-
-  <div class="mt-8 flex justify-center">
-    <a class="btn" href="/projects" target="_blank">
-      More Case Studies
-    </a>
+<section class="top-margin mb-20 md:mb-30">
+<Divider class="section-spacing" />
+  <div class="section-gap
+    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">
+      Featured Case Studies
+    </h2>
+  
+      {featured.map((item, i) => (
+        <div>
+          <HorizontalCard {...item} />
+          {i < featured.length - 1 && <div class="divider my-0"></div>}
+        </div>
+      ))}
+  
+    <div class="flex justify-center">
+      <a class="btn" href="/projects" target="_blank">
+        More Case Studies
+      </a>
+    </div>
   </div>
 </section>
 
