@@ -17,3 +17,7 @@
 .top-margin {
   @apply mt-4 sm:mt-6 md:mt-8;
 }
+
+.bottom-margin {
+  @apply mb-20 sm:mb-25 md:mb-30;
+}
