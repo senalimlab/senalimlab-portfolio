@@ -1,0 +1,8 @@
+  <!-- Divider -->
+<div class="w-full my-6">
+  <div class="flex items-center">
+    <div class="flex-1 h-px bg-miloYellow"></div>
+    <span class="mx-2 inline-block h-4 w-4 rounded-full bg-miloYellow"></span>
+    <div class="flex-1 h-px bg-miloYellow"></div>
+  </div>
+</div>
