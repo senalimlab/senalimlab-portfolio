@@ -1,0 +1,17 @@
+
+---
+const {
+  color = "bg-miloYellow",            // line color
+  thickness = "h-px",                   // line thickness
+  circleSize = "h-4 w-4",               // circle diameter
+  class: cls = ""                       // extra margin/padding classes
+} = Astro.props;
+---
+
+<div class={`w-full ${cls}`}>
+  <div class="flex items-center">
+    <div class={`flex-1 ${thickness} ${color}`}></div>
+    <span class={`mx-4 inline-block rounded-full ${circleSize} ${color}`}></span>
+    <div class={`flex-1 ${thickness} ${color}`}></div>
+  </div>
+</div>
