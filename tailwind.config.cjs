@@ -20,6 +20,9 @@ module.exports = {
 			fontSize: {
 			      '4-5xl': '2.75rem', // 42px
 			    },
+			backgroundImage: {
+		        'clarity-gradient': 'radial-gradient(circle, #5DADEC 55%, #D4A017 85%, #F5F7FA 100%)',
+		      },
 		},
 	},
 	plugins: [require("@tailwindcss/typography"),require("daisyui")],
