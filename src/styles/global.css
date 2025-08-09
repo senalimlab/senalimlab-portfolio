@@ -19,5 +19,5 @@
 }
 
 .bottom-margin {
-  @apply mb-20 sm:mb-25 md:mb-30;
+  @apply mb-20 sm:mb-30 md:mb-30;
 }
