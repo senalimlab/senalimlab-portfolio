@@ -6,6 +6,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.main-padding {
+  @apply p-6;
+}
+
+.main-top-padding {
+  @apply pt-10;
+}
+
+.main-desktop-max-width {
+  @apply lg:max-w-[900px];
+}
+
+.index_padding {
+  @apply p-0;
+}
+
+.main-desktop-width {
+  @apply max-w-[100vw];
+}
+
 .section-spacing {
   @apply my-6 sm:my-8 md:my-12;
 }
@@ -22,9 +42,7 @@
   @apply mb-20 sm:mb-28 md:mb-28;
 }
 
-.section_force_zero_x_padding {
-  @apply -px-6; sm:px-8 md:px-10;
-}
+
 
 
 const force_no_px = 6;
