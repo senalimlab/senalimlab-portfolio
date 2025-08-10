@@ -54,6 +54,10 @@
   @apply mb-20 sm:mb-28 md:mb-28;
 }
 
+.icon-size {
+  @apply h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8;
+}
+
 /* Tailwind default spacing scale numbers:
 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96 
 
