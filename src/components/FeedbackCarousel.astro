@@ -42,42 +42,6 @@ const id = "fb-" + Math.random().toString(36).slice(2);
           </li>
         ))}
       </ul>
-
-      <!-- ARROWS (sit on top of the scrolling area) -->
-      <button
-        type="button"
-        class="absolute left-1 md:left-2 top-1/2 -translate-y-1/2 z-20 h-9 w-9 md:h-10 md:w-10
-               rounded-full border border-gray-300 bg-white/90 backdrop-blur
-               hover:bg-white flex items-center justify-center
-               touch-manipulation pointer-events-auto"
-        data-prev
-        aria-label="Previous slide"
-      >‹</button>
-
-      <button
-        type="button"
-        class="absolute right-1 md:right-2 top-1/2 -translate-y-1/2 z-20 h-9 w-9 md:h-10 md:w-10
-               rounded-full border border-gray-300 bg-white/90 backdrop-blur
-               hover:bg-white flex items-center justify-center
-               touch-manipulation pointer-events-auto"
-        data-next
-        aria-label="Next slide"
-      >›</button>
-    </div>
-
-    <!-- DOTS -->
-    <div class="mt-4 flex items-center justify-center gap-2" data-dots>
-      {items.map((_, i) => (
-        <button
-          type="button"
-          class="h-2.5 w-2.5 rounded-full bg-gray-300 aria-[current=true]:bg-gray-800"
-          aria-label={`Go to slide ${i + 1}`}
-          aria-current={i === 0 ? "true" : "false"}
-          data-index={i}
-        />
-      ))}
-    </div>
-  </div>
 </section>
 
 <style is:global>
