@@ -11,6 +11,7 @@ module.exports = {
 			fontFamily: {
 			        serif: ['Playfair Display', 'serif'],
 				libertinus: ['"Libertinus Sans"', 'sans-serif'],
+				charmonman: ['Charmonman', ...defaultTheme.fontFamily.serif],
 			      },
 			colors: {
 			        miloYellow: '#fcdb05', // '#e80558', // nice yellow for hero circle\
