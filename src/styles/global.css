@@ -8,7 +8,7 @@
 
 .main {
   /* width grows to 100% but never exceeds 900px */
-  width: min(100%, 900px);
+  width: min(100%, 1000px);
   margin-inline: auto;       /* center the block */
   padding: 1.5rem;           /* p-6 */
   padding-top: 2.5rem;       /* pt-10 */
