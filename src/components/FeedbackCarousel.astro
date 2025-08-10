@@ -1,6 +1,8 @@
 ---
 // FeedbackCarousel.astro
 // Props: items: Array<{ author: string; role: string; body: string }>, title?: string
+import { feedback } from "../content/feedback.js";
+
 const { items = [], title = "What People Say" } = Astro.props;
 const id = "fb-" + Math.random().toString(36).slice(2);
 ---
