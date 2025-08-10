@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 // tailwind.config.cjs
-const defaultTheme = require('tailwindcss/defaultTheme');
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 module.exports = {
 	content: [
@@ -16,6 +16,7 @@ module.exports = {
 			        serif: ['Playfair Display', 'serif'],
 				libertinus: ['"Libertinus Sans"', 'sans-serif'],
 				charmonman: ['Charmonman', ...defaultTheme.fontFamily.serif],
+				handwriting: ['"Shadows Into Light"', ...defaultTheme.fontFamily.sans],
 			      },
 			colors: {
 			        miloYellow: '#fcdb05', // '#e80558', // nice yellow for hero circle\
