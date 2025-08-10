@@ -6,6 +6,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.main {
+  /* width grows to 100% but never exceeds 900px */
+  width: min(100%, 900px);
+  margin-inline: auto;       /* center the block */
+  padding: 1.5rem;           /* p-6 */
+  padding-top: 2.5rem;       /* pt-10 */
+}
+
 .main-padding {
   @apply p-6;
 }
