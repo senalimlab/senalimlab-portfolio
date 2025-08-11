@@ -16,11 +16,12 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 
 <BaseLayout title="Sena Lim">
 
-<!----------------------------------------- 
-  HERO 
+<!-----------------------------------------
+  HERO
 ------------------------------------------->
 
 <section
+  id="home"
   class="relative bg-white overflow-hidden -mx-6 md:-mx-12
          pt-0 md:pt-0 pb-10 md:pb-16
          md:min-h-screen md:flex md:items-center
@@ -117,7 +118,7 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 <!-----------------------------------------
   ABOUT ME
 ------------------------------------------->
-<section class="top-margin section-gap section-spacing">
+<section id="about" class="top-margin section-gap section-spacing">
   <Divider />
   <h2 class="heading-2 mb-6 text-center">About Me</h2>
   <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -150,7 +151,7 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 {/**
      * 3) IMPACT VIGNETTES — timeline-ish cards
      */}
-    <section class="top-margin section-gap section-spacing">
+    <section id="skills" class="top-margin section-gap section-spacing">
       <Divider />
       <h2 class="heading-2 mb-6 text-center">My Skills & Achievements</h2>
       <div class="mt-8 grid gap-5 md:grid-cols-3">
@@ -202,7 +203,7 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
   FEEDBACK
 ------------------------------------------->
 
-<section class="top-margin section-gap section-spacing">
+<section id="feedback" class="top-margin section-gap section-spacing">
 <Divider />
 <FeedbackCarousel items={feedback} title="What People Say" />
 </section>
@@ -211,7 +212,7 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 <!----------------------------------------- 
   CASE STUDIES
 ------------------------------------------->
-<section class="top-margin section-gap section-spacing">
+<section id="case-studies" class="top-margin section-gap section-spacing">
 <Divider />
     <h2 class="heading-2 text-center">
       My Case Studies
@@ -236,6 +237,7 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 ------------------------------------------->
 
 <section
+  id="connect"
   class="relative bg-white overflow-hidden -mx-6 md:-mx-12
          pt-0 md:pt-0 pb-10 md:pb-16
          md:min-h-screen md:flex md:items-center  mb-20 md:mb-30"
