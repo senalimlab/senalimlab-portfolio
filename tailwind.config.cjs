@@ -21,6 +21,7 @@ module.exports = {
 			colors: {
 			        miloYellow: '#fcdb05', // '#e80558', // nice yellow for hero circle\
 					textYellow: '#ebcc05',
+				miloYellowHighlighter: '#FEF9C3',
 				miloPurple: '#7200FF',     
 			},
 			fontSize: {
