@@ -1,0 +1,15 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+  <div class="flex items-center gap-3">
+    <div class="text-3xl">
+      <slot name="icon" />
+    </div>
+    <h3 class="heading-3">{title}</h3>
+  </div>
+  <div class="mt-4 body-text">
+    <slot />
+  </div>
+</div>

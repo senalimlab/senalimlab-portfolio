@@ -6,6 +6,7 @@ import Divider from "../components/Divider.astro";
 import { feedback } from "../content/feedback.js";
 import { caseStudiesInclusion, caseStudiesMission } from "../content/casestudies";
 import AboutCard from "../components/AboutCard.astro";
+import SkillCard from "../components/SkillCard.astro";
 
 // all in one rail (or pass just one category)
 const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
@@ -152,35 +153,34 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
     <section class="top-margin section-gap section-spacing">
       <Divider />
       <h2 class="heading-2 mb-6 text-center">My Skills & Achievements</h2>
-        <div class="mt-8 space-y-5">
-          <div class="rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
-            <h3 class="heading-3">Years of Experience</h3>
-            <p class="mt-2 body-text">
-              <strong>15+ years</strong> in digital product leadership, including <strong>7+ years</strong> delivering high‑stakes, policy‑constrained platforms across mobility, agri‑tech, and national infrastructure.
-            </p>
-          </div>
-          <div class="rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
-            <h3 class="heading-3">Achievements</h3>
-            <ul class="list-disc mt-8 pl-6 space-y-2 body-text">
-              <li>Hired, led and mentored cross‑functional product teams of up to 5 at BlueSG and Yara (100% retention over 2 years), covering 2–4 product areas including core experience, growth & expansion.</li>
-              <li>Delivered BlueSG national EV system rebuild for 900+ vehicles, 1,500 lots, and 30K active users with zero downtime, safeguarding operational continuity and public trust during live migrations.</li>
-              <li>Improved adoption (+14%) and safety (–12% incidents, 99% faster onboarding) across 4 countries at Neuron via IoT, AI onboarding, KYC automation, and city‑compliant features.</li>
-              <li>Scaled adoption to 3M+ users across 12 countries at Yara through inclusive, trust‑first UX for low‑digital‑confidence users, driving measurable confidence and retention gains.</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
-            <h3 class="heading-3">Technical Skills</h3>
-            <ul class="list-disc mt-8 pl-6 space-y-2 body-text">
-              <li>Strong technical aptitude in APIs, IoT, SaaS, and basic web & infra principles.</li>
-              <li>PSPO II & PSM I certified, with active learning in Generative AI, AI workflows, and Agentic AI.</li>
-             </ul>
-          </div>
-        </div>
+      <div class="mt-8 grid gap-5 md:grid-cols-3">
+        <SkillCard title="Years of Experience">
+          <span slot="icon">💼</span>
+          <p>
+            <strong>15+ years</strong> in digital product leadership, including <strong>7+ years</strong> delivering high‑stakes, policy‑constrained platforms across mobility, agri‑tech, and national infrastructure.
+          </p>
+        </SkillCard>
+        <SkillCard title="Achievements">
+          <span slot="icon">🏆</span>
+          <ul class="list-disc mt-2 pl-6 space-y-2">
+            <li>Hired, led and mentored cross‑functional product teams of up to 5 at BlueSG and Yara (100% retention over 2 years), covering 2–4 product areas including core experience, growth & expansion.</li>
+            <li>Delivered BlueSG national EV system rebuild for 900+ vehicles, 1,500 lots, and 30K active users with zero downtime, safeguarding operational continuity and public trust during live migrations.</li>
+            <li>Improved adoption (+14%) and safety (–12% incidents, 99% faster onboarding) across 4 countries at Neuron via IoT, AI onboarding, KYC automation, and city‑compliant features.</li>
+            <li>Scaled adoption to 3M+ users across 12 countries at Yara through inclusive, trust‑first UX for low‑digital‑confidence users, driving measurable confidence and retention gains.</li>
+          </ul>
+        </SkillCard>
+        <SkillCard title="Technical Skills">
+          <span slot="icon">🛠️</span>
+          <ul class="list-disc mt-2 pl-6 space-y-2">
+            <li>Strong technical aptitude in APIs, IoT, SaaS, and basic web & infra principles.</li>
+            <li>PSPO II & PSM I certified, with active learning in Generative AI, AI workflows, and Agentic AI.</li>
+          </ul>
+        </SkillCard>
       </div>
-      <div class="flex justify-center gap-5">
+      <div class="flex justify-center gap-5 mt-8">
         <a class="btn" href="/projects" target="_blank">View Resume</a>
       </div>
-     </section>
+    </section>
 
 
 <!----------------------------------------- 
