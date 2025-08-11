@@ -1,17 +1,20 @@
 ---
 const { title, subtitle } = Astro.props;
+const hasDefaultSlot = Astro.slots.has("default");
 ---
 
-<div class="flex">
-  <div class="education__time">
-    <span class="w-4 h-4 bg-miloYellow block rounded-full mt-1"></span>
-    <span class="education__line bg-miloYellow block h-full w-[2px] translate-x-[7px]"></span>
+<div class="flex gap-4 group">
+  <div class="education__time relative">
+    <span class="w-4 h-4 bg-miloYellow block rounded-full mt-2 z-10"></span>
+    <span class="education__line absolute left-[7px] top-6 -bottom-12 w-[2px] bg-miloYellow group-last:hidden"></span>
   </div>
-  <div class="experience__data bd-grid px-5">
-    <h3 class="font-semibold mb-1">{title}</h3>
-    <span class="font-light text-sm">{subtitle}</span>
-    <p class="my-2 text-justify">
-      <slot />
-    </p>
+  <div class="flex-1">
+    <h3 class="heading-3 mb-1">{title}</h3>
+    <span class="text-sm text-gray-600">{subtitle}</span>
+    {hasDefaultSlot && (
+      <div class="mt-2 text-sm">
+        <slot />
+      </div>
+    )}
   </div>
 </div>
