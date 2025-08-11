@@ -8,10 +8,8 @@ import { caseStudiesInclusion, caseStudiesMission } from "../content/casestudies
 <BaseLayout title = "Case Studies | Sena Lim" sideBarActiveItemID="projects">
 
 <!-- Inclusion & Everyday Systems -->
-  <div>
-    <div 
-      id="inclusion"
-      class="text-3xl w-full font-bold mb-5">Inclusion & Everyday Systems</div>
+  <div id="inclusion">
+    <div class="text-3xl w-full font-bold mb-5">Inclusion & Everyday Systems</div>
   </div>
   {caseStudiesInclusion.map((study, idx) => (
     <>
@@ -21,10 +19,8 @@ import { caseStudiesInclusion, caseStudiesMission } from "../content/casestudies
   ))}
 
   <!-- Mission-Critical Strategy -->
-  <div>
-    <div
-      id="mission"
-      class="text-3xl w-full font-bold mb-5 mt-10">Mission-Critical Strategy</div>
+  <div id="mission">
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Mission-Critical Strategy</div>
   </div>
   {caseStudiesMission.map((study, idx) => (
     <>
