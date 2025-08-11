@@ -1,15 +1,57 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300"; // For primary color replace with `active` class
+const activeClass = "bg-base-300 text-primary border-primary"; // For primary color replace with `active` class
 ---
 
-<ul id="sidebar-menu" class="menu grow shrink menu-md overflow-y-auto">
-  <li><a class="py-3 heading-3" id="home" href="/#home">Home</a></li>
-  <li><a class="py-3 heading-3" id="about" href="/#about">About Me</a></li>
-  <li><a class="py-3 heading-3" id="skills" href="/#skills">Skills &amp; Achievements</a></li>
-  <li><a class="py-3 heading-3" id="feedback" href="/#feedback">Feedback</a></li>
-  <li><a class="py-3 heading-3" id="case-studies" href="/#case-studies">Case Studies</a></li>
-  <li><a class="py-3 heading-3" id="connect" href="/#connect">Connect</a></li>
+<ul id="sidebar-menu" class="menu grow shrink menu-md overflow-y-auto p-2 space-y-1">
+  <li>
+    <a
+      class="flex items-center gap-3 px-4 py-3 heading-3 rounded-lg transition-colors border-l-4 border-transparent hover:bg-base-300 hover:border-primary hover:text-primary"
+      id="home"
+      href="/#home"
+      >Home</a
+    >
+  </li>
+  <li>
+    <a
+      class="flex items-center gap-3 px-4 py-3 heading-3 rounded-lg transition-colors border-l-4 border-transparent hover:bg-base-300 hover:border-primary hover:text-primary"
+      id="about"
+      href="/#about"
+      >About Me</a
+    >
+  </li>
+  <li>
+    <a
+      class="flex items-center gap-3 px-4 py-3 heading-3 rounded-lg transition-colors border-l-4 border-transparent hover:bg-base-300 hover:border-primary hover:text-primary"
+      id="skills"
+      href="/#skills"
+      >Skills &amp; Achievements</a
+    >
+  </li>
+  <li>
+    <a
+      class="flex items-center gap-3 px-4 py-3 heading-3 rounded-lg transition-colors border-l-4 border-transparent hover:bg-base-300 hover:border-primary hover:text-primary"
+      id="feedback"
+      href="/#feedback"
+      >Feedback</a
+    >
+  </li>
+  <li>
+    <a
+      class="flex items-center gap-3 px-4 py-3 heading-3 rounded-lg transition-colors border-l-4 border-transparent hover:bg-base-300 hover:border-primary hover:text-primary"
+      id="case-studies"
+      href="/#case-studies"
+      >Case Studies</a
+    >
+  </li>
+  <li>
+    <a
+      class="flex items-center gap-3 px-4 py-3 heading-3 rounded-lg transition-colors border-l-4 border-transparent hover:bg-base-300 hover:border-primary hover:text-primary"
+      id="connect"
+      href="/#connect"
+      >Connect</a
+    >
+  </li>
 </ul>
 
 <script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
