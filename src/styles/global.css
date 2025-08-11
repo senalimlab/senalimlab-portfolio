@@ -1,10 +1,18 @@
-.time-line-container>div:last-child .education__time>.education__line {
-    display: none;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.time-line-container>div:last-child {
+    padding-bottom: 0;
+}
+
+.time-line-container>div:last-child .education__time {
+    padding-bottom: 0;
+}
+
+.time-line-container>div:last-child .education__time>.education__line {
+    display: none;
+}
 
 .main {
   /* width grows to 100% but never exceeds 900px */
