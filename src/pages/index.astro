@@ -3,9 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import FeedbackCarousel from "../components/FeedbackCarousel.astro";
 import Divider from "../components/Divider.astro";
-import { Image } from "astro:assets";
 import { feedback } from "../content/feedback.js";
 import { caseStudiesInclusion, caseStudiesMission } from "../content/casestudies";
+import AboutCard from "../components/AboutCard.astro";
 
 // all in one rail (or pass just one category)
 const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
@@ -113,71 +113,35 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 </section>
 
 
-<!----------------------------------------- 
-  ABOUT ME 
+<!-----------------------------------------
+  ABOUT ME
 ------------------------------------------->
-<!--
 <section class="top-margin section-gap section-spacing">
-    <Divider />
-    <h2 class="heading-2 mb-6 text-center">
-      A Little About Me
-    </h2>
-
-    <p class="body-text leading-relaxed text-justify">
-      I build digital systems that quietly make life better. These are tools that people may never think about but rely on every day. <br /><br />
-      From keeping Singapore’s 900+ EV car-share vehicles running during a live system rebuild to helping three million farmers adopt new tools starting with a single SMS, I have learned that lasting change comes from designing with clarity, empathy, inclusion, and trust. <br /><br />
-      I am at my best when I am bringing people, technology, and purpose together, creating the kind of systems that quietly help others feel supported, capable, and ready to do their best work.
-    </p>
-
-   <div class="flex justify-center gap-5">
-      <a class="btn" href="/about" target="_blank">More About Me</a>
-      <a href="/cv" target="_blank" class="btn btn-outline">Resume</a>
-    </div>
+  <Divider />
+  <h2 class="heading-2 mb-6 text-center">About Me</h2>
+  <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <AboutCard
+        img="/thumb_youth.png"
+        title="Where I’m from"
+        desc={`I grew up in Malaysia in a small game console shop my family owned. I was drawn to RPG games — the sense of progress, discovery, and world-building fascinated me. That curiosity led me to study game programming in Singapore, where I learned that the “magic” behind games was built on logic, structure, and steady experimentation.</br>That realisation shaped how I approach my work today: creating systems that are clear in purpose, resilient in design, and quietly transformative and brings "magic" for the people who use them.`}
+      />
+      <AboutCard
+        img="/thumb_senior.png"
+        title="What I do best"
+        desc={`I call myself a Clarity Alchemist — someone who turns confusion into shared progress. I build digital systems that:</br>- Bring clarity to complex, multi-stakeholder environments</br>- Balance immediate delivery with long-term sustainability</br>- Win adoption by building trust, not forcing change</br>My work spans public, private, and mission-driven sectors, always with the goal of creating tools people may not think about every day, but rely on when it matters most.`}
+      />
+      <AboutCard
+        img="/thumb_one.png"
+        title="What Drives Me"
+        desc={`I believe the best systems are not flashy. They’re foundational. They support people through transitions, quietly making life better without demanding attention. Whether I’m working with naval officers on operational tools, educators on reducing admin load, or farmers adopting new technology, my aim is the same: build clarity, strengthen trust, and make progress possible.`}
+      />
+      <AboutCard
+        img="/thumb_pod.png"
+        title="Outside work"
+        desc={`When I’m not building digital systems, I’m often in the kitchen running baking experiments — reworking traditional recipes into low-carb, high-protein versions. Like product management, it’s about starting with a vision, testing small changes, and refining based on results. I also strength train daily, where progressive overload reminds me that lasting organisational change happens in steady, measurable steps.`}
+      />
+  </div>
 </section>
--->
-
-{/**
-     * 2) SNAPSHOT GRID — 4 compact panels
-     */}
-    <section class="top-margin section-gap section-spacing">
-      <Divider />
-        <h2 class="heading-2 mb-6 text-center">About Me</h2>
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <article class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 class="heading-3 font-serif">Where I’m from</h3>
-              <p class="mt-2 body-text">
-                I grew up in Malaysia in a small game console shop my family owned. I was drawn to RPG games — the sense of progress, discovery, and world-building fascinated me. That curiosity led me to study game programming in Singapore, where I learned that the “magic” behind games was built on logic, structure, and steady experimentation.</br>
-                That realisation shaped how I approach my work today: creating systems that are clear in purpose, resilient in design, and quietly transformative and brings "magic" for the people who use them.
-              </p>
-            </article>
-            <article class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 class="heading-3 font-serif">What I do best</h3>
-              <p class="mt-2 body-text">
-                I call myself a Clarity Alchemist — someone who turns confusion into shared progress.
-                I build digital systems that:</br>
-                - Bring clarity to complex, multi-stakeholder environments</br>
-                - Balance immediate delivery with long-term sustainability</br>
-                - Win adoption by building trust, not forcing change</br>
-                My work spans public, private, and mission-driven sectors, always with the goal of creating tools people may not think about every day, but rely on when it matters most.
-              </p>
-            </article>
-            <article class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 class="heading-3 font-serif">What Drives Me</h3>
-              <p class="mt-2 body-text">
-                I believe the best systems are not flashy. They’re foundational.
-                They support people through transitions, quietly making life better without demanding attention. Whether I’m working with naval officers on operational tools, educators on reducing admin load, or farmers adopting new technology, my aim is the same: build clarity, strengthen trust, and make progress possible.
-              </p>
-            </article>
-            <article class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
-              <h3 class="heading-3 font-serif">Outside work</h3>
-              <p class="mt-2 body-text">
-                When I’m not building digital systems, I’m often in the kitchen running baking experiments — reworking traditional recipes into low-carb, high-protein versions. Like product management, it’s about starting with a vision, testing small changes, and refining based on results. I also strength train daily, where progressive overload reminds me that lasting organisational change happens in steady, measurable steps.
-              </p>
-            </article>
-          </div>
-        </div>
-    </section>
-
 <!----------------------------------------- 
   RESUME 
 ------------------------------------------->
