@@ -62,8 +62,24 @@
   @apply gap-4 sm:gap-5 md:gap-6;
 }
 
+/*
+  Reusable typography utilities for headings and body text.
+  Update these once to tweak font sizing across the site.
+*/
+.heading-2 {
+  @apply text-2xl md:text-3xl font-bold;
+}
+
+.heading-3 {
+  @apply text-lg md:text-xl font-semibold;
+}
+
+.body-text {
+  @apply text-base md:text-lg text-gray-700;
+}
+
 /* Tailwind default spacing scale numbers:
-0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96 
+0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96
 
 
 text-xs     → 0.75rem   (12px)
