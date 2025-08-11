@@ -3,7 +3,7 @@ const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300"; // For primary color replace with `active` class
 ---
 
-<ul class="menu grow shrink menu-md overflow-y-auto">
+<ul id="sidebar-menu" class="menu grow shrink menu-md overflow-y-auto">
   <li><a class="py-3 text-base" id="home" href="/#home">Home</a></li>
   <li><a class="py-3 text-base" id="about" href="/#about">About</a></li>
   <li><a class="py-3 text-base" id="skills" href="/#skills">Skills &amp; Achievements</a></li>
@@ -15,4 +15,12 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
 <script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
 const activeItemElem = document.getElementById(sideBarActiveItemID);
 activeItemElem && activeItemElem.classList.add(activeClass);
+
+const menu = document.getElementById("sidebar-menu");
+menu?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    const drawerToggle = document.getElementById("my-drawer");
+    if (drawerToggle) drawerToggle.checked = false;
+  });
+});
 </script>
