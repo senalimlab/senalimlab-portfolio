@@ -10,9 +10,9 @@ const hasDefaultSlot = Astro.slots.has("default");
   </div>
   <div class="flex-1">
     <h3 class="heading-3 mb-1">{title}</h3>
-    <span class="text-sm text-gray-600">{subtitle}</span>
+    <span class="body-text text-gray-600">{subtitle}</span>
     {hasDefaultSlot && (
-      <div class="mt-2 text-sm">
+      <div class="mt-2 body-text">
         <slot />
       </div>
     )}
