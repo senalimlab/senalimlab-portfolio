@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
+import HorizontalCard from "../components/Highlight.astro";
 import FeedbackCarousel from "../components/FeedbackCarousel.astro";
 import Divider from "../components/Divider.astro";
 import { feedback } from "../content/feedback.js";
@@ -57,15 +58,11 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
     Alchemist
   </span>
     </h1>
-
+ 
     <p class=" text-base sm:text-lg md:text-2xl text-gray-700 md:leading-normal">
         I turn <span class="px-1 rounded bg-miloYellowHighlighter font-semibold">signals</span> into
-        <span class="px-1 rounded bg-miloYellowHighlighter font-semibold ">
-           clear product direction
-        </span> &
-        <span class="px-1 rounded bg-miloYellowHighlighter font-semibold">
-           experiment my way
-        </span>
+        <Highlight text="clear product direction" /> &
+        <Highlight text="experiment my way" />
         to <span class="px-1 rounded bg-miloYellowHighlighter font-semibold">build systems</span> that help people and strengthen communities.
     </p>
 
