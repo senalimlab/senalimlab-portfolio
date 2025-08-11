@@ -1,0 +1,19 @@
+---
+const { title, img, desc } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+  {img && (
+    <Image
+      src={img}
+      width={400}
+      height={250}
+      format="webp"
+      alt={title}
+      class="w-full h-40 object-cover rounded-md mb-4"
+    />
+  )}
+  <h3 class="heading-3 font-serif">{title}</h3>
+  <p class="mt-2 body-text">{desc}</p>
+</div>
