@@ -3,7 +3,7 @@ const { title, img, desc } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<div class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow section-gap">
+<div class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
   {img && (
     <Image
       src={img}
@@ -15,5 +15,5 @@ import { Image } from "astro:assets";
     />
   )}
   <h3 class="heading-3">{title}</h3>
-  <p class="body-text">{desc}</p>
+  <p class="mt-2 body-text">{desc}</p>
 </div>
