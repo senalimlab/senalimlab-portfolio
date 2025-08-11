@@ -114,9 +114,9 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 
 
 <!----------------------------------------- 
-  ABOUT ME & RESUME 
+  ABOUT ME 
 ------------------------------------------->
-
+<!--
 <section class="top-margin section-gap section-spacing">
     <Divider />
     <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">
@@ -134,6 +134,89 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
       <a href="/cv" target="_blank" class="btn btn-outline">Resume</a>
     </div>
 </section>
+-->
+
+{/**
+     * 2) SNAPSHOT GRID — 4 compact panels
+     */}
+    <section class="top-margin section-gap section-spacing">
+      <Divider />
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">About Me</h2>
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <article class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-serif text-lg font-semibold">Where I’m from</h3>
+              <p class="mt-2 text-base md:text-lg text-gray-700">
+                I grew up in Malaysia in a small game console shop my family owned. I was drawn to RPG games — the sense of progress, discovery, and world-building fascinated me. That curiosity led me to study game programming in Singapore, where I learned that the “magic” behind games was built on logic, structure, and steady experimentation.</br>
+                That realisation shaped how I approach my work today: creating systems that are clear in purpose, resilient in design, and quietly transformative and brings "magic" for the people who use them.
+              </p>
+            </article>
+            <article class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-serif text-lg font-semibold">What I do best</h3>
+              <p class="mt-2 text-base md:text-lg text-gray-700">
+                I call myself a Clarity Alchemist — someone who turns confusion into shared progress.
+                I build digital systems that:</br>
+                - Bring clarity to complex, multi-stakeholder environments</br>
+                - Balance immediate delivery with long-term sustainability</br>
+                - Win adoption by building trust, not forcing change</br>
+                My work spans public, private, and mission-driven sectors, always with the goal of creating tools people may not think about every day, but rely on when it matters most.
+              </p>
+            </article>
+            <article class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-serif text-lg font-semibold">What Drives Me</h3>
+              <p class="mt-2 text-base md:text-lg text-gray-700">
+                I believe the best systems are not flashy. They’re foundational.
+                They support people through transitions, quietly making life better without demanding attention. Whether I’m working with naval officers on operational tools, educators on reducing admin load, or farmers adopting new technology, my aim is the same: build clarity, strengthen trust, and make progress possible.
+              </p>
+            </article>
+            <article class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-serif text-lg font-semibold">Outside work</h3>
+              <p class="mt-2 text-base md:text-lg text-gray-700">
+                When I’m not building digital systems, I’m often in the kitchen running baking experiments — reworking traditional recipes into low-carb, high-protein versions. Like product management, it’s about starting with a vision, testing small changes, and refining based on results. I also strength train daily, where progressive overload reminds me that lasting organisational change happens in steady, measurable steps.
+              </p>
+            </article>
+          </div>
+        </div>
+    </section>
+
+<!----------------------------------------- 
+  RESUME 
+------------------------------------------->
+
+{/**
+     * 3) IMPACT VIGNETTES — timeline-ish cards
+     */}
+    <section class="top-margin section-gap section-spacing">
+      <Divider />
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Impact Summary</h2>
+        <div class="mt-8 space-y-5">
+          <div class="rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="font-semibold">Years of Experience</h3>
+            <p class="mt-2 text-gray-700 text-sm md:text-base">
+              <strong>15+ years</strong> in digital product leadership, including <strong>7+ years</strong> delivering high‑stakes, policy‑constrained platforms across mobility, agri‑tech, and national infrastructure.
+            </p>
+          </div>
+          <div class="rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="font-semibold">Achievements</h3>
+            <ul class="list-disc mt-8 pl-6 space-y-2">
+              <li>Hired, led and mentored cross‑functional product teams of up to 5 at BlueSG and Yara (100% retention over 2 years), covering 2–4 product areas including core experience, growth & expansion.</li>
+              <li>Delivered BlueSG national EV system rebuild for 900+ vehicles, 1,500 lots, and 30K active users with zero downtime, safeguarding operational continuity and public trust during live migrations.</li>
+              <li>Improved adoption (+14%) and safety (–12% incidents, 99% faster onboarding) across 4 countries at Neuron via IoT, AI onboarding, KYC automation, and city‑compliant features.</li>
+              <li>Scaled adoption to 3M+ users across 12 countries at Yara through inclusive, trust‑first UX for low‑digital‑confidence users, driving measurable confidence and retention gains.</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="font-semibold">Technical Skills</h3>
+            <ul class="list-disc mt-8 pl-6 space-y-2">
+              <li>Strong technical aptitude in APIs, IoT, SaaS, and basic web & infra principles.</li>
+              <li>PSPO II & PSM I certified, with active learning in Generative AI, AI workflows, and Agentic AI.</li>
+             </ul>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center gap-5">
+        <a href="/cv" target="_blank" class="btn btn-outline">Resume</a>
+      </div>
+     </section>
 
 
 <!----------------------------------------- 
