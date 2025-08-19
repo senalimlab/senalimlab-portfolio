@@ -151,8 +151,8 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
     <section id="skills" class="top-margin section-gap section-spacing scroll-mt-16 lg:scroll-mt-0">
       <Divider />
       <h2 class="heading-2 mb-6 text-center">Skills & Achievements</h2>
-      <div class="mt-8 grid gap-5 md:grid-cols-3">
-        <SkillCard title="Years of Experience">
+      <div class="mt-8 grid gap-5 md:grid-cols-2">
+        <SkillCard class="md:col-span-2" title="Years of Experience">
           <span slot="icon">💼</span>
           <p>15 years across mobility, agri-tech, media, automotive, and mission-driven domains</p>
           <ul class="list-disc mt-2 pl-6 space-y-2">
@@ -186,7 +186,7 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
             Scaled adoption to <Highlight text="3M+"/> users across <Highlight text="12"/> countries at Yara through inclusive, trust‑first UX for low‑digital‑confidence users, driving measurable confidence and retention gains.
           </p>
         </SkillCard>
-        <SkillCard title="Technical Skills">
+        <SkillCard class="md:col-span-2" title="Technical Skills">
           <span slot="icon">🛠️</span>
           <ul class="list-disc mt-2 pl-6 space-y-2">
             <li>Strong technical aptitude in APIs, IoT, SaaS, and basic web & infra principles.</li>
