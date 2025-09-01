@@ -3,7 +3,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "Youth Mental Health in Singapore";
 ---
 <BaseLayout title={title} sideBarActiveItemID="projects">
-  <div class="w-full flex justify-center">
-    <iframe src="https://gamma.app/embed/td94aa5y2k4zpkh" style="width: 700px; max-width: 100%; height: 450px" allow="fullscreen" title={title}></iframe>
-  </div>
+  <section class="w-full aspect-[700/450]">
+    <iframe
+      src="https://gamma.app/embed/td94aa5y2k4zpkh"
+      class="h-full w-full"
+      allow="fullscreen"
+      title={title}
+    ></iframe>
+  </section>
 </BaseLayout>
