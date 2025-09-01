@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Youth Mental Health in Singapore";
+---
+<BaseLayout title={title} sideBarActiveItemID="projects">
+  <section class="flex flex-col flex-1">
+    <h2 class="heading-2 mb-6 text-center">Case Study: {title}</h2>
+    <iframe
+      src="https://gamma.app/embed/td94aa5y2k4zpkh"
+      class="w-full flex-1"
+      allow="fullscreen"
+      title={title}
+    ></iframe>
+  </section>
+</BaseLayout>
