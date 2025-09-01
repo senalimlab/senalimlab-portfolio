@@ -3,10 +3,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "Crisis Triage Ecosystem";
 ---
 <BaseLayout title={title} sideBarActiveItemID="projects">
-  <section class="w-full aspect-[700/450]">
+  <section class="flex flex-col min-h-[calc(100vh-80px)]">
+    <h2 class="heading-2 mb-6 text-center">Case Study: {title}</h2>
     <iframe
       src="https://gamma.app/embed/01lr9crq9g9vk2v"
-      class="h-full w-full"
+      class="w-full flex-1"
       allow="fullscreen"
       title={title}
     ></iframe>

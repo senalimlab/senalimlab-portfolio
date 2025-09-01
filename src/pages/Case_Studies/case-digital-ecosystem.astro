@@ -3,10 +3,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "From Digital Touch Points to Digital Ecosystem";
 ---
 <BaseLayout title={title} sideBarActiveItemID="projects">
-  <section class="w-full aspect-[700/450]">
+  <section class="flex flex-col min-h-[calc(100vh-80px)]">
+    <h2 class="heading-2 mb-6 text-center">Case Study: {title}</h2>
     <iframe
       src="https://gamma.app/embed/88qzvk8e63ni770"
-      class="h-full w-full"
+      class="w-full flex-1"
       allow="fullscreen"
       title={title}
     ></iframe>
