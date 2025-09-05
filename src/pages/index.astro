@@ -6,6 +6,7 @@ import FeedbackCarousel from "../components/FeedbackCarousel.astro";
 import Divider from "../components/Divider.astro";
 import { feedback } from "../content/feedback.js";
 import { caseStudiesInclusion, caseStudiesMission } from "../content/casestudies";
+import { aiProjects } from "../content/ai-projects";
 import AboutCard from "../components/AboutCard.astro";
 import SkillCard from "../components/SkillCard.astro";
 
@@ -235,12 +236,31 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 ------------------------------------------->
 
 <section id="feedback" class="top-margin section-gap section-spacing scroll-mt-16 lg:scroll-mt-0">
-<Divider />
-<FeedbackCarousel items={feedback} title="Feedback" />
+  <Divider />
+  <FeedbackCarousel items={feedback} title="Feedback" />
 </section>
 
 
-<!----------------------------------------- 
+<!-----------------------------------------
+  AI PROJECTS
+------------------------------------------->
+<section id="ai-projects" class="top-margin section-gap section-spacing scroll-mt-16 lg:scroll-mt-0">
+<Divider />
+  <h2 class="heading-2 text-center">
+    AI Projects
+  </h2>
+
+    {aiProjects.map((item, i) => (
+      <div>
+        <HorizontalCard {...item} />
+        {i < aiProjects.length - 1 && <div class="divider my-0"></div>}
+      </div>
+    ))}
+
+</section>
+
+
+<!-----------------------------------------
   CASE STUDIES
 ------------------------------------------->
 <section id="case-studies" class="top-margin section-gap section-spacing scroll-mt-16 lg:scroll-mt-0">
