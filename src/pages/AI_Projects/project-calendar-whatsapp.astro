@@ -6,8 +6,23 @@ const title = "Calendar to WhatsApp Alerts";
   <section class="flex flex-col flex-1 prose max-w-none">
     <h2 class="heading-2 mb-6 text-center">{title}</h2>
     <p>
-      Whenever I create, update, or delete a Google Calendar event, this n8n workflow sends a WhatsApp update to the relevant people so
-      everyone stays informed in real time.
+      <b>A canceled meeting should not require detective work.</b><br/><br/>
+
+Small shifts in calendar invites often don’t get noticed, especially in async teams. I wanted stakeholders to stay in the loop — without having to check their calendars obsessively.<br/><br/>
+
+<b>🎯 Objective</b><br/>
+
+To bridge the gap between real-time calendar changes and team awareness — through a lightweight, mobile-first alert channel.<br/><br/>
+
+<b>🧠 What it does</b><br/>
+	•	Detects new/updated/canceled calendar events<br/>
+	•	Formats a message with key details<br/>
+	•	Sends a WhatsApp alert automatically<br/>
+	•	Verifies delivery<br/><br/>
+
+<b>🛠️ Technical stack</b><br/>
+
+n8n · Google Calendar API · WhatsApp Business API (HTTP) · Webhooks · Multi-state logic
     </p>
     <img src="/Project 3 - Google Shared Calendar - WhatsApp Message.png" alt="Google Calendar triggers sending WhatsApp notifications" />
   </section>
