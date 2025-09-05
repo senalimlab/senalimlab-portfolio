@@ -8,6 +8,8 @@ import { feedback } from "../content/feedback.js";
 import { caseStudiesInclusion, caseStudiesMission } from "../content/casestudies";
 import AboutCard from "../components/AboutCard.astro";
 import SkillCard from "../components/SkillCard.astro";
+import Card from "../components/Card.astro";
+import { automationProjects } from "../content/automation";
 
 // all in one rail (or pass just one category)
 const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
@@ -240,7 +242,21 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 </section>
 
 
-<!----------------------------------------- 
+<!-----------------------------------------
+  AI AUTOMATION
+------------------------------------------->
+<section id="ai-automation" class="top-margin section-gap section-spacing scroll-mt-16 lg:scroll-mt-0">
+<Divider />
+  <h2 class="heading-2 mb-6 text-center">AI Automation</h2>
+  <div class="mt-8 grid md:grid-cols-2 gap-5">
+    {automationProjects.map((item) => (
+      <Card {...item} target="_self" />
+    ))}
+  </div>
+</section>
+
+
+<!-----------------------------------------
   CASE STUDIES
 ------------------------------------------->
 <section id="case-studies" class="top-margin section-gap section-spacing scroll-mt-16 lg:scroll-mt-0">
