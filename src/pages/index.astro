@@ -18,21 +18,17 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 ------------------------------------------->
 
 <script
-  src="https://cdn.jsdelivr.net/gh/senalimlab/langflow-embedded-chat@main/dist/embed.js">
+      src="https://cdn.jsdelivr.net/gh/senalimlab/langflow-embedded-chat@main/dist/build/static/js/bundle.min.js">
  <!-- src="https://cdn.jsdelivr.net/gh/logspace-ai/langflow-embedded-chat@v1.0.7/dist/build/static/js/bundle.min.js"> -->
 </script>
-<style is:global>
-  langflow-chat {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 50;
-  }
-</style>
   <langflow-chat
     window_title="Sena's Assistant"
     flow_id="a8d6fa1f-0ec3-4328-875b-7a2b769f2ed5"
-    host_url="https://langflow.senalimlab.com">
+    host_url="https://langflow.senalimlab.com"
+    position: 'bottom-right',                      
+    theme: 'light',                                 
+    primaryColor: miloYellow,   
+>
 </langflow-chat>
 
 
