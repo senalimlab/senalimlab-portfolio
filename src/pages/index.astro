@@ -39,9 +39,10 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
   document.addEventListener("DOMContentLoaded", () => {
     const chat = document.querySelector("langflow-chat");
     if (!chat) return;
-
     const positionDialog = () => {
-      const dialog = document.querySelector("div[role='dialog']");
+      const root = chat.shadowRoot;
+      if (!root) return;
+      const dialog = root.querySelector("div[role='dialog']");
       if (!dialog) return;
       const { width } = chat.getBoundingClientRect();
       Object.assign(dialog.style, {
@@ -49,13 +50,20 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
         bottom: "1rem",
         right: `calc(1rem + ${width}px)`,
         top: "auto",
+        left: "auto",
         transform: "none",
         zIndex: 50,
       });
     };
 
-    const observer = new MutationObserver(positionDialog);
-    observer.observe(document.body, { childList: true, subtree: true });
+    const observeRoot = () => {
+      const root = chat.shadowRoot;
+      if (!root) return;
+      const observer = new MutationObserver(positionDialog);
+      observer.observe(root, { childList: true, subtree: true });
+    };
+
+    observeRoot();
     positionDialog();
   });
 </script>
