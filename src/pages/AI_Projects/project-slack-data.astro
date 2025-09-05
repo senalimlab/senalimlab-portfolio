@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Slack Data Agent";
+---
+<BaseLayout title={title} sideBarActiveItemID="ai-projects">
+  <section class="flex flex-col flex-1 prose max-w-none">
+    <h2 class="heading-2 mb-6 text-center">{title}</h2>
+    <p>
+      This n8n automation lets me query and update spreadsheet or database records directly from Slack. When a chat command comes in,
+      the flow fetches or updates the relevant rows and responds right in Slack.
+    </p>
+    <img src="/ai_project2b.png" alt="Slack trigger and AI agent workflow" />
+    <p class="mt-4">Behind the scenes, an MCP server trigger coordinates sheet updates and database calls.</p>
+    <img src="/ai_project2a.png" alt="MCP server trigger updating Google Sheets" />
+    <img src="/ai_project2c.png" alt="Workflow retrieving and filtering rows" />
+  </section>
+</BaseLayout>

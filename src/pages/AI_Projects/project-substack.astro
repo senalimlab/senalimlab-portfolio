@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Substack Newsletter Summaries";
+---
+<BaseLayout title={title} sideBarActiveItemID="ai-projects">
+  <section class="flex flex-col flex-1 prose max-w-none">
+    <h2 class="heading-2 mb-6 text-center">{title}</h2>
+    <p>
+      I built a daily n8n automation that pulls Substack emails from Gmail, ranks their importance for me as a product manager,
+      summarises key takeaways, emails me the recap, and finally marks the original messages as read.
+    </p>
+    <img src="/ai_project1.png" alt="n8n workflow summarising Substack newsletters" />
+  </section>
+</BaseLayout>
