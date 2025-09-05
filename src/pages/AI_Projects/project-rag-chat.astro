@@ -3,10 +3,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "Portfolio RAG Chatbot";
 ---
 <BaseLayout title={title} sideBarActiveItemID="ai-projects">
-  <section class="flex flex-col flex-1 prose max-w-none">
+  <section class="flex flex-col flex-1 items-center">
     <h2 class="heading-2 mb-6 text-center">{title}</h2>
-    <p>
-      <b>What if people could explore my work by asking questions?</b><br/><br/>
+    <div class="card bg-base-200 shadow-md w-full max-w-3xl">
+      <div class="card-body prose max-w-none">
+        <p>
+          <b>What if people could explore my work by asking questions?</b><br/><br/>
 
 I wanted my portfolio to be more than just a static list of case studies. So I built a retrieval-augmented chatbot using Langflow — trained on my own documents.<br/><br/>
 
@@ -15,17 +17,19 @@ I wanted my portfolio to be more than just a static list of case studies. So I b
 To make my portfolio more explorable — showing how RAG can enable stakeholder self-service in a real-world context.<br/><br/>
 
 <b>🧠 What it does</b><br/>
-	•	Uses embeddings to chunk and store my docs<br/>
-	•	Accepts freeform questions via chat<br/>
-	•	Runs a semantic query to retrieve the right content<br/>
-	•	Generates a grounded GPT response with context<br/>
-	•	Runs directly in my Astro-based portfolio site<br/><br/>
+        •       Uses embeddings to chunk and store my docs<br/>
+        •       Accepts freeform questions via chat<br/>
+        •       Runs a semantic query to retrieve the right content<br/>
+        •       Generates a grounded GPT response with context<br/>
+        •       Runs directly in my Astro-based portfolio site<br/><br/>
 
 <b>🛠️ Technical stack</b><br/>
 
 Langflow · OpenAI API · Astro · Vector Store · RAG architecture · Prompt tuning
-    </p>
-    <img src="/Project 4 - RAG Chat.png" alt="Embedded chat assistant" />
-    <img src="/Project 4 - RAG Chat langflow.png" alt="Langflow RAG chat flow" />
+        </p>
+        <img src="/Project 4 - RAG Chat.png" alt="Embedded chat assistant" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
+        <img src="/Project 4 - RAG Chat langflow.png" alt="Langflow RAG chat flow" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
+      </div>
+    </div>
   </section>
 </BaseLayout>

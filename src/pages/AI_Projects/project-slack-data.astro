@@ -3,10 +3,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "Slack Data Agent";
 ---
 <BaseLayout title={title} sideBarActiveItemID="ai-projects">
-  <section class="flex flex-col flex-1 prose max-w-none">
+  <section class="flex flex-col flex-1 items-center">
     <h2 class="heading-2 mb-6 text-center">{title}</h2>
-    <p>
-      <b>Data requests shouldn’t require 3 tabs and 5 pings.</b><br/><br/>
+    <div class="card bg-base-200 shadow-md w-full max-w-3xl">
+      <div class="card-body prose max-w-none">
+        <p>
+          <b>Data requests shouldn’t require 3 tabs and 5 pings.</b><br/><br/>
 
 I often find myself trying to fetch status updates or edit rows in a shared sheet buried three folders deep. It’s tedious. So I turned Slack into a natural language interface for my data.<br/><br/>
 
@@ -15,18 +17,19 @@ I often find myself trying to fetch status updates or edit rows in a shared shee
 To reduce context-switching and make internal data instantly accessible, right from Slack.<br/><br/>
 
 <b>🧠 What it does</b><br/>
-	•	Interprets commands like “show progress for Initiative X”<br/>
-	•	Routes to the right spreadsheet/database<br/>
-	•	Pulls the row or updates the field<br/>
-	•	Returns results instantly in Slack<br/><br/>
+        •       Interprets commands like “show progress for Initiative X”<br/>
+        •       Routes to the right spreadsheet/database<br/>
+        •       Pulls the row or updates the field<br/>
+        •       Returns results instantly in Slack<br/><br/>
 
 <b>🛠️ Technical stack</b><br/>
 
 n8n · Slack API · OpenAI · MCP API · Prompt-based routing · Modular memory + tools
-    </p>
-
-    <img src="/Project 2 - Slack Workflow.png" alt="Slack trigger and AI agent workflow" />
-    <img src="/Project 2 - Slack Workflow - MCP.png" alt="MCP server trigger updating Google Sheets" />
-    <img src="/Project 2 - Slack Workflow - MCP - Row Lookup.png" alt="Workflow retrieving and filtering rows" />
+        </p>
+        <img src="/Project 2 - Slack Workflow.png" alt="Slack trigger and AI agent workflow" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
+        <img src="/Project 2 - Slack Workflow - MCP.png" alt="MCP server trigger updating Google Sheets" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
+        <img src="/Project 2 - Slack Workflow - MCP - Row Lookup.png" alt="Workflow retrieving and filtering rows" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
+      </div>
+    </div>
   </section>
 </BaseLayout>

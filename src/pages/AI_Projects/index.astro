@@ -7,8 +7,9 @@ import { aiProjects } from "../../content/ai-projects";
 <BaseLayout title="AI Projects | Sena Lim" sideBarActiveItemID="ai-projects">
   <section class="flex flex-col flex-1">
     <h2 class="heading-2 text-center mb-6">AI Projects</h2>
-
-<p>
+    <div class="card bg-base-200 shadow-md mb-10">
+      <div class="card-body prose max-w-none text-center">
+        <p>
 This site started from a free GitHub template, but I rebuilt and customized much of it myself. When I got stuck, I turned to ChatGPT Codex to help troubleshoot and learn.<br/><br/>
 
 These AI projects came from the same mindset:<br/>
@@ -18,7 +19,9 @@ Each tool here came from a question I kept running into as a PM:<br/>
 <b>“What am I doing repeatedly that doesn’t spark joy — or impact?”</b><br/><br/>
 
 The result: four lean, purposeful systems that quietly make my work faster, clearer, and more human.<br/><br/>
-</p>
+        </p>
+      </div>
+    </div>
 
     {aiProjects.map((item, i) => (
       <>
