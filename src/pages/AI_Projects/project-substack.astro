@@ -6,32 +6,24 @@ const title = "Substack Newsletter Summaries";
   <section class="flex flex-col flex-1 prose max-w-none">
     <h2 class="heading-2 mb-6 text-center">{title}</h2>
     <p>
-     <b>Tooling:</b> n8n, OpenAI, Gmail API<br/><br/>
-I built a daily automation that pulls Substack newsletters from Gmail, ranks them by product-relevance, summarizes the key takeaways, and sends me a personalized recap — all before I finish my morning coffee. It uses a fine-tuned scoring logic to prioritize insights on product strategy, AI trends, and leadership. Original emails are then marked as read for inbox hygiene.<br/><br/>
-
-<b>→ Why it matters:</b> Cuts through content overload, supports continuous learning, and turns passive reading into structured input.<br/>
-<b>→ What it shows:</b> Prompt engineering, workflow design, GPT model integration, and email automation.
-
-
-
 <b>Too much good content. Too little time.</b><br/><br/>
 
 I used to keep tabs on ~10 Substack newsletters, all focused on product strategy, tech policy, and AI. But every week, I’d fall behind — and then forget what I’d read.<br/><br/>
 
 So I built a system.<br/><br/>
 
-<b>🎯 Objective</b><br/><br/>
+<b>🎯 Objective</b><br/>
 
 To turn information overload into a structured daily insight loop — surfacing only what’s relevant to my work, without the inbox clutter.<br/><br/>
 
-<b>🧠 What it does</b><br/><br/>
+<b>🧠 What it does</b><br/>
 	•	Pulls newsletter emails via Gmail API<br/>
 	•	Scores each based on product-relevance using prompt logic<br/>
 	•	Summarizes key insights with GPT<br/>
 	•	Sends me a daily digest<br/>
-	•	Marks the original emails as read<br/>
+	•	Marks the original emails as read<br/><br/>
 
-<b>🛠️ Technical stack</b><br/><br/>
+<b>🛠️ Technical stack</b><br/>
 
 n8n · Gmail API · OpenAI GPT · Conditional logic · Error fallback
 
