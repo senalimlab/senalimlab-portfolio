@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "RAG Chat Assistant";
+---
+<BaseLayout title={title} sideBarActiveItemID="projects">
+  <section class="prose mx-auto">
+    <h2 class="heading-2 mb-6 text-center">{title}</h2>
+    <p>
+      Built with Langflow, this retrieval-augmented generation chatbot acts as my virtual assistant on the portfolio.
+      Visitors can ask it anything about my work or background and get instant answers sourced from my own content.
+    </p>
+    <img src="/ai-automation/rag-assistant.svg" alt="RAG chat assistant" class="mx-auto my-4" />
+  </section>
+</BaseLayout>

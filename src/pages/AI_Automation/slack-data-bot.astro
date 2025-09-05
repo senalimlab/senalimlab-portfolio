@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Slack Data Bot";
+---
+<BaseLayout title={title} sideBarActiveItemID="projects">
+  <section class="prose mx-auto">
+    <h2 class="heading-2 mb-6 text-center">{title}</h2>
+    <p>
+      Using n8n and Slack, this automation lets me query and update spreadsheet or database records directly from a
+      Slack channel. It connects through an MCP server so I can chat with data, keeping everything in context.
+    </p>
+    <img src="/ai-automation/slack-data-bot.svg" alt="Slack data bot workflow" class="mx-auto my-4" />
+  </section>
+</BaseLayout>

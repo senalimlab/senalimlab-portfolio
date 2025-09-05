@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Calendar WhatsApp Alerts";
+---
+<BaseLayout title={title} sideBarActiveItemID="projects">
+  <section class="prose mx-auto">
+    <h2 class="heading-2 mb-6 text-center">{title}</h2>
+    <p>
+      This workflow keeps everyone informed when my schedule changes. Creating, updating, or deleting a Google
+      Calendar event triggers n8n to send a WhatsApp message to the right people with the latest details.
+    </p>
+    <img src="/ai-automation/calendar-whatsapp.svg" alt="Calendar to WhatsApp automation" class="mx-auto my-4" />
+  </section>
+</BaseLayout>

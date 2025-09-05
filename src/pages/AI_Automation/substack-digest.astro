@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Substack Digest Automation";
+---
+<BaseLayout title={title} sideBarActiveItemID="projects">
+  <section class="prose mx-auto">
+    <h2 class="heading-2 mb-6 text-center">{title}</h2>
+    <p>
+      This n8n workflow pulls new Substack emails from my Gmail inbox each day, summarizes their content and rates each
+      newsletter based on what I can learn as a product manager. It then emails me a digest and marks the originals as
+      read so my inbox stays clean.
+    </p>
+    <img src="/ai-automation/substack-digest.svg" alt="Substack digest automation" class="mx-auto my-4" />
+  </section>
+</BaseLayout>
