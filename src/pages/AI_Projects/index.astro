@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HorizontalCard from "../../components/HorizontalCard.astro";
+import { aiProjects } from "../../content/ai-projects";
+---
+
+<BaseLayout title="AI Projects | Sena Lim" sideBarActiveItemID="ai-projects">
+  <section class="flex flex-col flex-1">
+    <h2 class="heading-2 text-center mb-6">AI Projects</h2>
+    {aiProjects.map((item, i) => (
+      <>
+        <HorizontalCard {...item} />
+        {i < aiProjects.length - 1 && <div class="divider my-0"></div>}
+      </>
+    ))}
+  </section>
+</BaseLayout>
