@@ -3,9 +3,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "Substack Newsletter Summariser";
 ---
 <BaseLayout title={title} sideBarActiveItemID="ai-projects">
-  <section class="flex flex-col flex-1 prose max-w-none">
+  <section class="flex flex-col flex-1 items-center">
     <h2 class="heading-2 mb-6 text-center">{title}</h2>
-    <p>
+    <div class="card bg-base-200 shadow-md w-full max-w-3xl">
+      <div class="card-body prose max-w-none">
+        <p>
 <b>Too much good content. Too little time.</b><br/><br/>
 
 I used to keep tabs on ~10 Substack newsletters, all focused on product strategy, tech policy, and AI. But every week, I’d fall behind and then forget what I’d read.<br/><br/>
@@ -17,23 +19,22 @@ So I built a system.<br/><br/>
 To turn information overload into a structured daily insight loop — surfacing only what’s relevant to my work, without the inbox clutter.<br/><br/>
 
 <b>🧠 What it does</b><br/>
-	•	Pulls newsletter emails via Gmail API<br/>
-	•	Scores each based on product-relevance using prompt logic<br/>
-	•	Summarizes key insights with GPT<br/>
-	•	Sends me a daily digest<br/>
-	•	Marks the original emails as read<br/><br/>
+        •       Pulls newsletter emails via Gmail API<br/>
+        •       Scores each based on product-relevance using prompt logic<br/>
+        •       Summarizes key insights with GPT<br/>
+        •       Sends me a daily digest<br/>
+        •       Marks the original emails as read<br/><br/>
 
 <b>🛠️ Technical stack</b><br/>
 
 n8n · Gmail API · OpenAI GPT · Conditional logic · Error fallback<br/><br/>
 
 <b>N8N Flow</b>
-    </p>
-<p>
-    <img src="/Project 1 - Substack Newsletter Summariser.png" alt="n8n workflow summarising Substack newsletters" />
-
-<b>Summary Email</b>
- </p>
-    <img src="/Project 1 - Substack Newsletter Summariser - Email.png" alt="Summary email sample" />
+        </p>
+        <img src="/Project 1 - Substack Newsletter Summariser.png" alt="n8n workflow summarising Substack newsletters" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
+        <p class="mt-6 font-bold">Summary Email</p>
+        <img src="/Project 1 - Substack Newsletter Summariser - Email.png" alt="Summary email sample" class="rounded-lg shadow-md w-full mx-auto mt-2 md:max-w-xl" />
+      </div>
+    </div>
   </section>
 </BaseLayout>

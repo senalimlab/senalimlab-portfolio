@@ -3,10 +3,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "Calendar to WhatsApp Alerts";
 ---
 <BaseLayout title={title} sideBarActiveItemID="ai-projects">
-  <section class="flex flex-col flex-1 prose max-w-none">
+  <section class="flex flex-col flex-1 items-center">
     <h2 class="heading-2 mb-6 text-center">{title}</h2>
-    <p>
-      <b>A canceled meeting should not require detective work.</b><br/><br/>
+    <div class="card bg-base-200 shadow-md w-full max-w-3xl">
+      <div class="card-body prose max-w-none">
+        <p>
+          <b>A canceled meeting should not require detective work.</b><br/><br/>
 
 Small shifts in calendar invites often don’t get noticed, especially in async teams. I wanted stakeholders to stay in the loop without having to check their calendars obsessively.<br/><br/>
 
@@ -15,15 +17,17 @@ Small shifts in calendar invites often don’t get noticed, especially in async 
 To bridge the gap between real-time calendar changes and team awareness through a lightweight, mobile-first alert channel.<br/><br/>
 
 <b>🧠 What it does</b><br/>
-	•	Detects new/updated/canceled calendar events<br/>
-	•	Formats a message with key details<br/>
-	•	Sends a WhatsApp alert automatically<br/>
-	•	Verifies delivery<br/><br/>
+        •       Detects new/updated/canceled calendar events<br/>
+        •       Formats a message with key details<br/>
+        •       Sends a WhatsApp alert automatically<br/>
+        •       Verifies delivery<br/><br/>
 
 <b>🛠️ Technical stack</b><br/>
 
 n8n · Google Calendar API · WhatsApp Business API (HTTP) · Webhooks · Multi-state logic
-    </p>
-    <img src="/Project 3 - Google Shared Calendar - WhatsApp Message.png" alt="Google Calendar triggers sending WhatsApp notifications" />
+        </p>
+        <img src="/Project 3 - Google Shared Calendar - WhatsApp Message.png" alt="Google Calendar triggers sending WhatsApp notifications" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
+      </div>
+    </div>
   </section>
 </BaseLayout>
