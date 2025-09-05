@@ -20,11 +20,61 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
 <script
   src="https://cdn.jsdelivr.net/gh/logspace-ai/langflow-embedded-chat@v1.0.7/dist/build/static/js/bundle.min.js">
 </script>
-  <langflow-chat
-    window_title="Sena's Assistant"
-    flow_id="a8d6fa1f-0ec3-4328-875b-7a2b769f2ed5"
-    host_url="https://langflow.senalimlab.com">
+<style is:global>
+  langflow-chat {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 50;
+  }
+</style>
+
+<langflow-chat
+  window_title="Sena's Assistant"
+  flow_id="a8d6fa1f-0ec3-4328-875b-7a2b769f2ed5"
+  host_url="https://langflow.senalimlab.com">
 </langflow-chat>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const chat = document.querySelector("langflow-chat");
+    if (!chat) return;
+
+    const setup = () => {
+      const root = chat.shadowRoot;
+      if (!root) return;
+
+      const getTriggerWidth = () => {
+        const btn = root.querySelector("button");
+        return btn?.offsetWidth || 48;
+      };
+
+      const placeDialog = () => {
+        const dialog = root.querySelector("div[role='dialog']");
+        if (!dialog) return;
+        const width = getTriggerWidth();
+        dialog.style.setProperty("position", "fixed", "important");
+        dialog.style.setProperty("bottom", "1rem", "important");
+        dialog.style.setProperty("right", `calc(1rem + ${width}px)`, "important");
+        dialog.style.setProperty("left", "auto", "important");
+        dialog.style.setProperty("top", "auto", "important");
+        dialog.style.setProperty("transform", "none", "important");
+        dialog.style.setProperty("z-index", "50", "important");
+      };
+
+      const observer = new MutationObserver(placeDialog);
+      observer.observe(root, { childList: true, subtree: true });
+
+      placeDialog();
+    };
+
+    if (customElements.get("langflow-chat")) {
+      setup();
+    } else {
+      customElements.whenDefined("langflow-chat").then(setup);
+    }
+  });
+</script>
 
 
 <BaseLayout title="Sena Lim">
