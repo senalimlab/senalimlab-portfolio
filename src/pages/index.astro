@@ -12,6 +12,7 @@ import SkillCard from "../components/SkillCard.astro";
 
 // all in one rail (or pass just one category)
 const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
+const aiProjectsPreview = aiProjects.slice(0, 3);
 ---
 
 <!-----------------------------------------
@@ -250,13 +251,18 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
     AI Projects
   </h2>
 
-    {aiProjects.map((item, i) => (
+    {aiProjectsPreview.map((item, i) => (
       <div>
         <HorizontalCard {...item} />
-        {i < aiProjects.length - 1 && <div class="divider my-0"></div>}
+        {i < aiProjectsPreview.length - 1 && <div class="divider my-0"></div>}
       </div>
     ))}
 
+    <div class="flex justify-center">
+      <a class="btn" href="/AI_Projects" target="_blank">
+        View All AI Projects
+      </a>
+    </div>
 </section>
 
 
