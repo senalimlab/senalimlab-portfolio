@@ -5,10 +5,10 @@ const title = "Portfolio RAG Chatbot";
 <BaseLayout title={title} sideBarActiveItemID="ai-projects">
   <section class="flex flex-col flex-1 items-center">
     <h2 class="heading-2 mb-6 text-center">{title}</h2>
-    <div class="card bg-base-200 shadow-md w-full max-w-3xl">
-      <div class="card-body prose max-w-none">
-        <p>
-          <b>What if people could explore my work by asking questions?</b><br/><br/>
+      <div class="card bg-base-200 shadow-md w-full max-w-3xl">
+        <div class="card-body">
+          <p class="body-text">
+            <b>What if people could explore my work by asking questions?</b><br/><br/>
 
 I wanted my portfolio to be more than just a static list of case studies. So I built a retrieval-augmented chatbot using Langflow, trained on my own documents.<br/><br/>
 
@@ -23,13 +23,13 @@ To make my portfolio more explorable, showing how RAG can enable stakeholder sel
         •       Generates a grounded GPT response with context<br/>
         •       Runs directly in my Astro-based portfolio site<br/><br/>
 
-<b>🛠️ Technical stack</b><br/>
+  <b>🛠️ Technical stack</b><br/>
 
-Langflow · OpenAI API · Astro · Vector Store · RAG architecture · Prompt tuning
-        </p>
-        <img src="/Project 4 - RAG Chat.png" alt="Embedded chat assistant" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
-        <img src="/Project 4 - RAG Chat langflow.png" alt="Langflow RAG chat flow" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
+  Langflow · OpenAI API · Astro · Vector Store · RAG architecture · Prompt tuning
+          </p>
+          <img src="/Project 4 - RAG Chat.png" alt="Embedded chat assistant" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
+          <img src="/Project 4 - RAG Chat langflow.png" alt="Langflow RAG chat flow" class="rounded-lg shadow-md w-full mx-auto mt-6 md:max-w-xl" />
+        </div>
       </div>
-    </div>
   </section>
 </BaseLayout>
