@@ -40,37 +40,31 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
     const chat = document.querySelector("langflow-chat");
     if (!chat) return;
 
-    const init = () => {
-      const positionDialog = () => {
-        const root = chat.shadowRoot;
-        if (!root) return;
-        const dialog = root.querySelector("div[role='dialog']");
-        if (!dialog) return;
-        const width = chat.offsetWidth || 48;
-        Object.assign(dialog.style, {
-          position: "fixed",
-          bottom: "1rem",
-          right: `calc(1rem + ${width}px)`,
-          top: "auto",
-          left: "auto",
-          transform: "none",
-          zIndex: 50,
-        });
-      };
-
-      const root = chat.shadowRoot;
-      if (root) {
-        const observer = new MutationObserver(positionDialog);
-        observer.observe(root, { childList: true, subtree: true });
-      }
-
-      positionDialog();
+    const getTriggerWidth = () => {
+      const btn = chat.shadowRoot?.querySelector("button");
+      return btn?.offsetWidth || 48;
     };
 
+    const placeDialog = () => {
+      const dialog = document.body.querySelector("div[role='dialog']");
+      if (!dialog) return;
+      const width = getTriggerWidth();
+      dialog.style.setProperty("position", "fixed", "important");
+      dialog.style.setProperty("bottom", "1rem", "important");
+      dialog.style.setProperty("right", `calc(1rem + ${width}px)`, "important");
+      dialog.style.setProperty("left", "auto", "important");
+      dialog.style.setProperty("top", "auto", "important");
+      dialog.style.setProperty("transform", "none", "important");
+      dialog.style.setProperty("z-index", "50", "important");
+    };
+
+    const observer = new MutationObserver(placeDialog);
+    observer.observe(document.body, { childList: true, subtree: true });
+
     if (customElements.get("langflow-chat")) {
-      init();
+      placeDialog();
     } else {
-      customElements.whenDefined("langflow-chat").then(init);
+      customElements.whenDefined("langflow-chat").then(placeDialog);
     }
   });
 </script>
