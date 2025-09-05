@@ -28,6 +28,8 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
     bottom: 1rem;
     right: 1rem;
     z-index: 50;
+    width: min(400px, calc(100vw - 2rem));
+    height: min(500px, calc(100vh - 2rem));
   }
 </style>
   <langflow-chat
@@ -39,9 +41,7 @@ const featured = [...caseStudiesInclusion, ...caseStudiesMission].slice(0, 3);
     placeholder="Ask anything about Sena"
     chat_trigger_style='{ "backgroundColor": "#fcdb05", "color": "#000","border":"2px solid black","borderRadius":"50%" }'
     send_icon_style='{"color": "#fcdb05"}',
-    send_button_style='{"color": "#fcdb05"}',
-    width=400,
-    height=500
+    send_button_style='{"color": "#fcdb05"}'
 >
 </langflow-chat>
 
